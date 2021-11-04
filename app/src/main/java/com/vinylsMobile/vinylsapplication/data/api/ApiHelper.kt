@@ -6,6 +6,6 @@ import io.reactivex.Single
 
 class ApiHelper(private val apiService: ApiService) {
 
-    fun getAlbums() = apiService.getAlbums()
+    suspend fun getAlbums() = apiService.getAlbums()
 
 }

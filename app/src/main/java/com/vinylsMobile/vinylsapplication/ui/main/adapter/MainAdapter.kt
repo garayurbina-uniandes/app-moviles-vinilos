@@ -18,17 +18,19 @@ class MainAdapter (private val albums: ArrayList<albumResponse>
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val bindPar = binding;
         fun bind(album: albumResponse) {
-            bindPar.textViewAlbumName.text = album.name
-            bindPar.textViewUserEmail.text = album.recordLabel
-            Glide.with(bindPar.imageViewAvatar.context)
-                .load(album.cover)
-                .into(bindPar.imageViewAvatar)
+            bindPar.root.apply {
+                bindPar.textViewAlbumName.text = album.name
+                bindPar.textViewUserEmail.text = album.recordLabel
+                Glide.with(bindPar.imageViewAvatar.context)
+                    .load(album.cover)
+                    .into(bindPar.imageViewAvatar)
+            }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):DataViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
 
-        val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context) ,parent, false )
+        val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return DataViewHolder(binding)
     }
@@ -38,8 +40,11 @@ class MainAdapter (private val albums: ArrayList<albumResponse>
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
         holder.bind(albums[position])
 
-    fun addData(list: List<albumResponse>) {
-        albums.addAll(list)
-    }
+    fun addAlbums(albums: List<albumResponse>) {
+        this.albums.apply {
+            clear()
+            addAll(albums)
+        }
 
+    }
 }

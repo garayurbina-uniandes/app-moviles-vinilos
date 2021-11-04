@@ -6,7 +6,5 @@ import io.reactivex.Single
 
 class albumRepository(private val apiHelper: ApiHelper) {
 
-    fun getAlbums(): Single<List<albumResponse>> {
-        return apiHelper.getAlbums()
-    }
+     suspend fun getAlbums() = apiHelper.getAlbums()
 }

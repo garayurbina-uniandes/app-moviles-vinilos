@@ -2,7 +2,6 @@ package com.vinylsMobile.vinylsapplication.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.vinylsMobile.vinylsapplication.R
 import com.vinylsMobile.vinylsapplication.ui.main.adapter.MainAdapter
 import com.vinylsMobile.vinylsapplication.ui.main.viewmodel.MainViewModel
 import androidx.lifecycle.Observer
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
 import com.vinylsMobile.vinylsapplication.data.api.ApiHelper
-import com.vinylsMobile.vinylsapplication.data.api.ApiServiceImpl
+import com.vinylsMobile.vinylsapplication.data.api.RetrofitBuilder
 import com.vinylsMobile.vinylsapplication.data.model.albumResponse
 import com.vinylsMobile.vinylsapplication.databinding.ActivityMainBinding
 import com.vinylsMobile.vinylsapplication.ui.base.ViewModelFactory
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         setupUI()
         setupViewModel()
-        setupObserver()
+        setupObservers()
     }
 
     private fun setupUI() {
@@ -46,36 +45,41 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
     }
 
-    private fun setupObserver() {
+    private fun setupObservers() {
         mainViewModel.getAlbums().observe(this, Observer {
-            when (it.status) {
-                Status.SUCCESS -> {
-                    binding.progressBar.visibility = View.GONE
-                    it.data?.let { albums -> renderList(albums) }
-                    binding.recyclerView.visibility = View.VISIBLE
-                }
-                Status.LOADING -> {
-                    binding.progressBar.visibility = View.VISIBLE
-                    binding.recyclerView.visibility = View.GONE
-                }
-                Status.ERROR -> {
-                    //Handle Error
-                    binding.progressBar.visibility = View.GONE
-                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+            it?.let { resource ->
+                when (resource.status) {
+                    Status.SUCCESS -> {
+                        binding.recyclerView.visibility = View.VISIBLE
+                        binding.progressBar.visibility = View.GONE
+                        resource.data?.let { albums -> retrieveList(albums) }
+                    }
+                    Status.ERROR -> {
+                        binding.recyclerView.visibility = View.VISIBLE
+                        binding.progressBar.visibility = View.GONE
+                        Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    }
+                    Status.LOADING -> {
+                        binding.progressBar.visibility = View.VISIBLE
+                        binding.recyclerView.visibility = View.GONE
+                    }
                 }
             }
         })
     }
 
-    private fun renderList(users: List<albumResponse>) {
-        adapter.addData(users)
-        adapter.notifyDataSetChanged()
-    }
 
     private fun setupViewModel() {
         mainViewModel = ViewModelProviders.of(
             this,
-            ViewModelFactory(ApiHelper(ApiServiceImpl()))
+            ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
         ).get(MainViewModel::class.java)
+    }
+
+    private fun retrieveList(albums: List<albumResponse>) {
+        adapter.apply {
+            addAlbums(albums)
+            notifyDataSetChanged()
+        }
     }
 }
