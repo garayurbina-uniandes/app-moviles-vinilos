@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VinylsApplication</string>
+    <string name="title_activity_detail_album">DetailAlbumActivity</string>
 </resources>

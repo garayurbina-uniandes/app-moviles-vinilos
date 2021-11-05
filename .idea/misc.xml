@@ -3,19 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../layout/custom_preview.xml" value="0.16666666666666666" />
-        <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/list_content.xml" value="0.1515625" />
-        <entry key="app/src/main/res/layout/activity_albums_list.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_retrofit.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/content_albums_list.xml" value="0.17889492753623187" />
-        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.17889492753623187" />
-        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17889492753623187" />
-        <entry key="app/src/main/res/menu/layout_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_detail_album.xml" value="0.42338709677419356" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
