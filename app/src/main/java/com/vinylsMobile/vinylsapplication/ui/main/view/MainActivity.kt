@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                         binding.progressBar.visibility = View.GONE
                         resource.data?.let { albums -> retrieveList(albums) }
                     }
-                    Status.ERROR -> {
+                    Status.ERROR-> {
                         binding.recyclerView.visibility = View.VISIBLE
                         binding.progressBar.visibility = View.GONE
                         Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
