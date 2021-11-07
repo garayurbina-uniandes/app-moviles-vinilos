@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">VinylsApplication</string>
-    <string name="title_activity_detail_album">DetailAlbumActivity</string>
+    <string name="title_activity_detail_album"></string>
+    <string name="date_label">Fecha de lanzamiento:</string>
+    <string name="genre_label">Género:</string>
+    <string name="record_label">Compañia Discografica:</string>
+    <string name="description_label">Descripción:</string>
 </resources>
