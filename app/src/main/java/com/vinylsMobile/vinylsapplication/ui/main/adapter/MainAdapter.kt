@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-import com.vinylsMobile.vinylsapplication.data.model.albumResponse
+import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 import com.vinylsMobile.vinylsapplication.ui.main.view.DetailAlbumActivity
 
 const val ID = "id"
 
-class MainAdapter (private val albums: ArrayList<albumResponse>
+class MainAdapter (private val albums: ArrayList<AlbumResponse>
 ) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
     lateinit var context : Context
@@ -21,7 +21,7 @@ class MainAdapter (private val albums: ArrayList<albumResponse>
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val bindPar = binding;
-        fun bind(album: albumResponse) {
+        fun bind(album: AlbumResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = album.name
                 bindPar.textViewUserEmail.text = album.recordLabel
@@ -55,7 +55,7 @@ class MainAdapter (private val albums: ArrayList<albumResponse>
         holder.bind(albums[position])
     }
 
-    fun addAlbums(albums: List<albumResponse>) {
+    fun addAlbums(albums: List<AlbumResponse>) {
         this.albums.apply {
             clear()
             addAll(albums)

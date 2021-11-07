@@ -12,7 +12,7 @@ import android.view.View
 import android.widget.Toast
 import com.vinylsMobile.vinylsapplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsapplication.data.api.RetrofitBuilder
-import com.vinylsMobile.vinylsapplication.data.model.albumResponse
+import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.databinding.ActivityMainBinding
 import com.vinylsMobile.vinylsapplication.ui.base.ViewModelFactory
 import com.vinylsMobile.vinylsapplication.utils.Status
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         ).get(MainViewModel::class.java)
     }
 
-    private fun retrieveList(albums: List<albumResponse>) {
+    private fun retrieveList(albums: List<AlbumResponse>) {
         adapter.apply {
             addAlbums(albums)
             notifyDataSetChanged()
