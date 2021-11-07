@@ -12,9 +12,9 @@ class DetailAdapter (private val albumDetail: AlbumResponse)  {
         Glide.with(binding.imageView2.context)
             .load(albumDetail.cover)
             .into(binding.imageView2)
-        binding.textViewArtist.text=albumDetail.releaseDate.toString()
-        binding.textViewGenre.text=albumDetail.genre
-        binding.textViewRecord.text=albumDetail.recordLabel
-        binding.textViewDescrption.text=albumDetail.description
+        binding.textContentDate.text=albumDetail.releaseDate.toString()
+        binding.textContentGenre.text=albumDetail.genre
+        binding.textContentRecord.text=albumDetail.recordLabel
+        binding.textContentDescrption.text=albumDetail.description
     }
 }
