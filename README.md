@@ -25,4 +25,4 @@ Para ejecutar el tess de pruebas E2E en Espresso ralizar los sigientes pasos:
 ### Sprint 1
 | Tipo de prueba               	| Dispositivo                                                             	| Link 	|
 |------------------------------	|-------------------------------------------------------------------------	|------	|
-| Prueba manual de aceptación  	| Dispositivo Huawei Y9 , Android 10 <br>Sistema operativo EMU<br>4GB RAM 	| https://www.youtube.com/watch?v=cyQpce6HyhE |
+| Prueba manual de aceptación  	| Dispositivo Huawei Y9 , Android 10 <br>Sistema operativo EMU<br>4GB RAM 	| https://youtu.be/cyQpce6HyhE |
