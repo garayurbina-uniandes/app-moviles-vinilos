@@ -11,9 +11,12 @@
         <entry key="app/src/main/res/layout/activity_retrofit.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_albums_list.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/content_detail_album.xml" value="0.1634963768115942" />
+        <entry key="app/src/main/res/layout/fragment_album_list.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.17889492753623187" />
+        <entry key="app/src/main/res/layout/fragment_list.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/navigation.xml" value="0.1640625" />
         <entry key="app/src/main/res/menu/layout_menu.xml" value="0.1" />
       </map>
     </option>

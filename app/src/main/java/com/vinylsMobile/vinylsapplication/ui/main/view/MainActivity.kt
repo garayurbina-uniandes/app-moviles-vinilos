@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.vinylsMobile.vinylsapplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsapplication.data.api.RetrofitBuilder
 import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
@@ -19,67 +22,18 @@ import com.vinylsMobile.vinylsapplication.utils.Status
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var mainViewModel: MainViewModel
-    private lateinit var adapter: MainAdapter
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        setupUI()
-        setupViewModel()
-        setupObservers()
-    }
+        val navHostFragment = supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
 
-    private fun setupUI() {
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = MainAdapter(arrayListOf())
-        binding.recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                binding.recyclerView.context,
-                (binding.recyclerView.layoutManager as LinearLayoutManager).orientation
-            )
-        )
-        binding.recyclerView.adapter = adapter
-    }
+        navController = navHostFragment.navController
 
-    private fun setupObservers() {
-        mainViewModel.getAlbums().observe(this, Observer {
-            it?.let { resource ->
-                when (resource.status) {
-                    Status.SUCCESS -> {
-                        binding.recyclerView.visibility = View.VISIBLE
-                        binding.progressBar.visibility = View.GONE
-                        resource.data?.let { albums -> retrieveList(albums) }
-                    }
-                    Status.ERROR -> {
-                        binding.recyclerView.visibility = View.VISIBLE
-                        binding.progressBar.visibility = View.GONE
-                        Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
-                    }
-                    Status.LOADING -> {
-                        binding.progressBar.visibility = View.VISIBLE
-                        binding.recyclerView.visibility = View.GONE
-                    }
-                }
-            }
-        })
-    }
-
-
-    private fun setupViewModel() {
-        mainViewModel = ViewModelProviders.of(
-            this,
-            ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-        ).get(MainViewModel::class.java)
-    }
-
-    private fun retrieveList(albums: List<AlbumResponse>) {
-        adapter.apply {
-            addAlbums(albums)
-            notifyDataSetChanged()
-        }
+        setupActionBarWithNavController(navController)
     }
 }
