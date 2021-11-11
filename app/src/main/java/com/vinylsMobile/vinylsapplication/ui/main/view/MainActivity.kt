@@ -2,23 +2,14 @@ package com.vinylsMobile.vinylsapplication.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.vinylsMobile.vinylsapplication.ui.main.adapter.MainAdapter
-import com.vinylsMobile.vinylsapplication.ui.main.viewmodel.MainViewModel
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import android.view.View
-import android.widget.Toast
+import android.util.Log
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.vinylsMobile.vinylsapplication.data.api.ApiHelper
-import com.vinylsMobile.vinylsapplication.data.api.RetrofitBuilder
-import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.databinding.ActivityMainBinding
-import com.vinylsMobile.vinylsapplication.ui.base.ViewModelFactory
-import com.vinylsMobile.vinylsapplication.utils.Status
+import com.vinylsMobile.vinylsapplication.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,5 +26,34 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         setupActionBarWithNavController(navController)
+
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                 binding.bottomNavigationView.menu.getItem(0).itemId-> {
+                    setFragment(AlbumListFragment.newInstance())
+                    return@setOnItemSelectedListener true
+                }
+                binding.bottomNavigationView.menu.getItem(1).itemId -> {
+                    setFragment(ArtistListFragment.newInstance())
+                    return@setOnItemSelectedListener true
+                }
+                binding.bottomNavigationView.menu.getItem(2).itemId -> {
+                    setFragment(CollectorListFragment.newInstance())
+                    return@setOnItemSelectedListener true
+                }
+            }
+            false
+        }
     }
+
+    private fun setFragment(fr : Fragment){
+        val frag = supportFragmentManager.beginTransaction()
+        frag.replace(binding.navHostFragment.id,fr).setCustomAnimations(R.anim.slide_in ,R.anim.fade_out,R.anim.fade_in, R.anim.slide_out)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+            .addToBackStack(null)
+            .commit()
+    }
+
+
+
 }

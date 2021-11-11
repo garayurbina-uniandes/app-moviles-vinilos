@@ -30,10 +30,6 @@ class AlbumListFragment : Fragment() {
     private lateinit var adapter: MainAdapter
     private lateinit var binding:FragmentAlbumListBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     private fun setupUI() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
         adapter = MainAdapter(arrayListOf())
@@ -47,7 +43,6 @@ class AlbumListFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        Log.d("esta"," llamando a albumes")
         mainViewModel.getAlbums().observe(viewLifecycleOwner, Observer {
             it?.let { resource ->
                 when (resource.status) {
@@ -94,14 +89,12 @@ class AlbumListFragment : Fragment() {
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
          *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
          * @return A new instance of fragment BlankFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() =
-            AlbumListFragment().apply {
+        fun newInstance() :AlbumListFragment {
+            return AlbumListFragment()
             }
     }
 

@@ -12,11 +12,9 @@ import kotlinx.coroutines.Dispatchers
 class MainViewModel(private val AlbumRepository: AlbumRepository): ViewModel() {
     fun getAlbums() = liveData(Dispatchers.IO) {
     emit(Resource.loading(data = null))
-        Log.d("esta"," llamando")
     try {
         emit(Resource.success(data = AlbumRepository.getAlbums()))
     } catch (exception: Exception) {
-        Log.d("Puteada",exception.message!!)
         emit(Resource.error(data = null, msg = exception.message ?: "Un error ha ocurrido!"))
     }
 }

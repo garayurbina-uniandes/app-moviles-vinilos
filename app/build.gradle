@@ -115,5 +115,8 @@ dependencies {
     androidTestImplementation "androidx.test:core:$androidx_test"
     androidTestImplementation "androidx.test.ext:junit-ktx:$androidx_test"
 
+    implementation 'com.google.android.material:material:1.4.0'
+
     testImplementation 'junit:junit:4.+'
+
 }
