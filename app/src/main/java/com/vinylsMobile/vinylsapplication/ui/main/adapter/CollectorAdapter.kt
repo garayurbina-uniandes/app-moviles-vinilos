@@ -30,7 +30,6 @@ class CollectorAdapter (private val collectors: ArrayList<CollectorResponse>
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val bindPar = binding;
-        @RequiresApi(Build.VERSION_CODES.M)
         fun bind(collector: CollectorResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = collector.name
