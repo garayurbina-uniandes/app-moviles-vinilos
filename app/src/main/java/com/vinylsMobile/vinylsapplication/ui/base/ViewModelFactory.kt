@@ -8,11 +8,11 @@ import com.vinylsMobile.vinylsapplication.ui.main.viewmodel.MainViewModel
 
 class ViewModelFactory (private val apiHelper: ApiHelper) : ViewModelProvider.Factory {
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             return MainViewModel(AlbumRepository(apiHelper)) as T
         }
         throw IllegalArgumentException("Clase desconocida")
     }
 
-    }
+}

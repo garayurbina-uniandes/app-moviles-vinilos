@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Albums" android:id="@+id/nav_graph_album" android:icon="@drawable/ic_baseline_album_24"/>
-    <item android:title="Artists" android:id="@+id/nav_graph_artist" android:icon="@drawable/ic_sing"/>
-    <item android:title="Collectors" android:id="@+id/action_books" android:icon="@drawable/ic_baseline_people_24"/>
+    <item android:title="@string/menu_album__label" android:id="@+id/nav_graph_album" android:icon="@drawable/ic_baseline_album_24"/>
+    <item android:title="@string/menu_artist_label" android:id="@+id/nav_graph_artist" android:icon="@drawable/ic_sing"/>
+    <item android:title="@string/menu_collector_label" android:id="@+id/action_books" android:icon="@drawable/ic_baseline_people_24"/>
 </menu>

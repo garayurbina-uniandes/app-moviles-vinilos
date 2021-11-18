@@ -12,7 +12,7 @@ import com.vinylsMobile.vinylsapplication.ui.main.viewmodel.MainViewModel
 
 class CollectorViewModelFactory (private val apiHelper: ApiHelper) : ViewModelProvider.Factory {
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(CollectorViewModel::class.java)) {
             return CollectorViewModel(CollectorRepository(apiHelper)) as T
         }

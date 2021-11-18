@@ -22,14 +22,14 @@
             app:popupTheme="@style/Theme.VinylsApplication.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintWidth_percent="90">
 
         <ImageView
@@ -43,7 +43,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.104"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/detail_artist_description_image"/>
 
         <TextView
             android:id="@+id/textLabelArtist"
@@ -113,7 +114,7 @@
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto"
             android:textColor="@color/black"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textLabelDescription"
             app:layout_constraintTop_toBottomOf="@+id/textLabelDescription"
@@ -141,25 +142,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textLabelAlbumes">
 
-            <TableRow
-                android:id="@+id/tbrow1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/t1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/t2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-            </TableRow>
         </TableLayout>
 
         <TextView
@@ -183,19 +165,6 @@
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textLabelPrizes">
-
-            <TableRow
-                android:id="@+id/tbrow"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tp1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-            </TableRow>
         </TableLayout>
 
 

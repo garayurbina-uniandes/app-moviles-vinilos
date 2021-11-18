@@ -16,7 +16,8 @@
         android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/item_layout_description_image"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewAlbumName"
@@ -26,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:fontFamily="@font/roboto_medium"
         android:gravity="bottom"
-        android:textSize="14dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
@@ -37,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="20dp"
         android:fontFamily="@font/roboto_thin"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:gravity="bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
