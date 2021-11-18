@@ -31,7 +31,7 @@ class ArtistViewModel(private val ArtistRepository: ArtistRepository): ViewModel
         }
     }
 
-    fun getMusciansDetail(id: String) = liveData(Dispatchers.IO) {
+    fun getMusiciansDetail(id: String) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
             emit(Resource.success(data = ArtistRepository.getMusicianstDetail(id)))

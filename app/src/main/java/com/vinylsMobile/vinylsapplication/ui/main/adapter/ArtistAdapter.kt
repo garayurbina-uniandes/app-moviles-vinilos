@@ -2,6 +2,7 @@ package com.vinylsMobile.vinylsapplication.ui.main.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,10 +12,12 @@ import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 import com.vinylsMobile.vinylsapplication.ui.main.view.DetailAlbumActivity
+import com.vinylsMobile.vinylsapplication.ui.main.view.DetailArtistActivity
 import java.util.*
 import kotlin.collections.ArrayList
 
 const val IDArtista = "id"
+const val artist = "band"
 
 class ArtistAdapter (private val artists: ArrayList<ArtistResponse>
 ) : RecyclerView.Adapter<ArtistAdapter.DataViewHolder>() {
@@ -46,12 +49,13 @@ class ArtistAdapter (private val artists: ArrayList<ArtistResponse>
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bindPar.root.setOnClickListener {
-            //Log.d("hola"," mundo")
-    //        val intent = Intent(context, DetailAlbumActivity::class.java).apply {
-      //          putExtra(ID, artists[position].id.toString())
-      //      }
+            Log.d("hola"," mundo hago click")
+            val intent = Intent(context, DetailArtistActivity::class.java).apply {
+                putExtra(IDArtista, artists[position].id.toString())
+                putExtra(artist,if(artists[position].birthDate==null) "Banda" else "Musico")
+            }
 
-     //       context.startActivity(intent)
+            context.startActivity(intent)
 
         }
 

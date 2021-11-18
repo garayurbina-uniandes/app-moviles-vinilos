@@ -6,4 +6,8 @@
     <string name="genre_label">Género:</string>
     <string name="record_label">Compañia Discografica:</string>
     <string name="description_label">Descripción:</string>
+    <string name="artist_name_label">Artista:</string>
+    <string name="artist_date_label">Fecha:</string>
+    <string name="artist_albums_label">Albumes:</string>
+    <string name="artist_prizes_label">Premios:</string>
 </resources>

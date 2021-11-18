@@ -6,6 +6,6 @@ import java.util.*
 class PerformerPrizes {
     @SerializedName("id")
     lateinit var id: Number
-    @SerializedName("description")
+    @SerializedName("premiationDate")
     var premiationDate: Date? = null
 }
