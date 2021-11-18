@@ -3,6 +3,7 @@ package com.vinylsMobile.vinylsapplication.data.api
 
 import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.data.model.ArtistResponse
+import com.vinylsMobile.vinylsapplication.data.model.CollectorResponse
 
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -19,6 +20,9 @@ interface ApiService {
 
         @GET("bands")
         suspend fun getBands(): List<ArtistResponse>
+
+        @GET("collectors")
+        suspend fun getCollectors(): List<CollectorResponse>
 
         @GET("musicians/{id}")
         suspend fun getMusiciansDetail(@Path("id") id: String): ArtistResponse

@@ -13,10 +13,10 @@ class CollectorResponse {
     var telephone: String? = null
     @SerializedName("email")
     var email: String? = null
-    @SerializedName("creationDate")
-    var creationDate = Date()
-    @SerializedName("description")
-    var description: String? = null
-    @SerializedName("albums")
-    var albums: ArrayList<AlbumResponse> = ArrayList()
+    @SerializedName("comments")
+    var comments: ArrayList<CommentModel> = ArrayList()
+    @SerializedName("favoritePerformers")
+    var favoritePerformers: ArrayList<ArtistResponse> = ArrayList()
+    @SerializedName("collectorAlbums")
+    var collectorAlbums: ArrayList<AlbumResponse> = ArrayList()
 }
