@@ -2,11 +2,17 @@ package com.vinylsMobile.vinylsapplication.ui.main.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.PorterDuff
+import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.vinylsMobile.vinylsapplication.R
 
 import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.data.model.ArtistResponse
@@ -24,13 +30,17 @@ class CollectorAdapter (private val collectors: ArrayList<CollectorResponse>
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val bindPar = binding;
+        @RequiresApi(Build.VERSION_CODES.M)
         fun bind(collector: CollectorResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = collector.name
                 bindPar.textViewUserEmail.text = collector.email
                 Glide.with(bindPar.imageViewAvatar.context)
-                    .load(collector.favoritePerformers[0].image)
+                    .load(R.drawable.ic_collector)
+                    .error(R.drawable.ic_collector).placeholder(R.drawable.ic_collector)
+                    .transition(DrawableTransitionOptions.withCrossFade())
                     .into(bindPar.imageViewAvatar)
+                bindPar.imageViewAvatar.setColorFilter(Color.rgb(162,0,0),PorterDuff.Mode.SRC_ATOP)
             }
         }
     }
