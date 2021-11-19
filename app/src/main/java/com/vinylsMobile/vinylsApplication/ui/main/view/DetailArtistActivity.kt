@@ -95,7 +95,7 @@ class DetailArtistActivity : AppCompatActivity() {
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home -> {
+            R.id.home -> {
                 finish()
                 return true
             }
