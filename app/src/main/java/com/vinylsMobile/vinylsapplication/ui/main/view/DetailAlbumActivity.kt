@@ -31,6 +31,7 @@ class DetailAlbumActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
+
         val id = intent.getStringExtra(ID)!!
 
         setupViewModel()

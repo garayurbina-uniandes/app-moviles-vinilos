@@ -1,5 +1,6 @@
 package com.vinylsMobile.vinylsapplication.ui.main.view
 
+import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -8,15 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.vinylsMobile.vinylsapplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsapplication.data.api.RetrofitBuilder
-import com.vinylsMobile.vinylsapplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.data.model.ArtistResponse
-import com.vinylsMobile.vinylsapplication.databinding.ActivityDetailAlbumBinding
 import com.vinylsMobile.vinylsapplication.databinding.ActivityDetailArtistBinding
 import com.vinylsMobile.vinylsapplication.ui.base.ArtistViewModelFactory
-import com.vinylsMobile.vinylsapplication.ui.base.ViewModelFactory
-import com.vinylsMobile.vinylsapplication.ui.main.adapter.*
+import com.vinylsMobile.vinylsapplication.ui.main.adapter.DetailArtistAdapter
+import com.vinylsMobile.vinylsapplication.ui.main.adapter.IDArtista
+import com.vinylsMobile.vinylsapplication.ui.main.adapter.artist
 import com.vinylsMobile.vinylsapplication.ui.main.viewmodel.ArtistViewModel
-import com.vinylsMobile.vinylsapplication.ui.main.viewmodel.MainViewModel
 import com.vinylsMobile.vinylsapplication.utils.Status
 
 class DetailArtistActivity : AppCompatActivity() {
@@ -34,6 +33,10 @@ class DetailArtistActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
+
+
+
+
         val artistType = intent.getStringExtra(artist)!!
 
         setupViewModel()
@@ -104,6 +107,18 @@ class DetailArtistActivity : AppCompatActivity() {
         }
         return super.onContextItemSelected(item)
     }
+
+    // Override  supportActionBar?.setDisplayHomeAsUpEnabled , close current activity
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.home) {
+            onBackPressed()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
 
 
 }
