@@ -8,8 +8,8 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
-import com.vinylsMobile.vinylsapplication.R
-import com.vinylsMobile.vinylsapplication.ui.main.view.MainActivity
+import com.vinylsMobile.vinylsApplication.R
+import com.vinylsMobile.vinylsApplication.ui.main.view.MainActivity
 import org.junit.Test
 import org.junit.runner.RunWith
 

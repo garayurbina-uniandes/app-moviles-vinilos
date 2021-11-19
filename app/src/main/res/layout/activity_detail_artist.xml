@@ -71,7 +71,7 @@
 
 
         <TextView
-            android:id="@+id/textLabelFecha"
+            android:id="@+id/textLabelDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -89,9 +89,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
             android:textColor="@color/black"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textLabelFecha"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textLabelDate"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textLabelFecha"
+            app:layout_constraintStart_toEndOf="@+id/textLabelDate"
             tools:text="2021-11-07" />
 
         <TextView
@@ -107,7 +107,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textContentDate" />
 
         <TextView
-            android:id="@+id/textContentDescrption"
+            android:id="@+id/textContentDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -121,7 +121,7 @@
             tools:text="Descripcion orem ipsum dolor sit amet consectetur adipiscing elit himenaeos nunc dictum, lacus sed penatibus tempor fringilla sociis posuere curabitur semper, ornare nisi conubia habitasse dignissim congue varius tempus suspendisse. Eleifend torquent praesent leo porta et lacinia a, ridiculus molestie odio iaculis montes luctus nullam, enim malesuada aliquet eget nisl arcu. Rhoncus senectus aliquam id convallis ligula auctor orci suscipit, pharetra cubilia mi mollis porttitor quisque platea nec lobortis, euismod proin gravida sem sapien bibendum hendrerit. Laoreet tortor velit vulputate nam dis eros fames massa, maecenas duis felis magnis lectus pellentesque vitae parturient quis, mattis vivamus venenatis eu purus in class. " />
 
         <TextView
-            android:id="@+id/textLabelAlbumes"
+            android:id="@+id/textLabelAlbums"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -130,7 +130,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textContentDescrption" />
+            app:layout_constraintTop_toBottomOf="@+id/textContentDescription" />
 
         <TableLayout
             android:id="@+id/table_main"
@@ -140,7 +140,7 @@
             android:stretchColumns="*"
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textLabelAlbumes">
+            app:layout_constraintTop_toBottomOf="@+id/textLabelAlbums">
 
         </TableLayout>
 

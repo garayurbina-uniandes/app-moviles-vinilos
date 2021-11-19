@@ -1,40 +1,37 @@
-package com.vinylsMobile.espressoTestSprint1
+package com.vinylsMobile.vinylsApplication.ui.main.view
+
 
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions
+import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.contrib.RecyclerViewActions
-import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import com.vinylsMobile.vinylsApplication.R
-import com.vinylsMobile.vinylsApplication.ui.main.view.MainActivity
 import org.hamcrest.Description
 import org.hamcrest.Matcher
-import org.hamcrest.Matchers
+import org.hamcrest.Matchers.allOf
 import org.hamcrest.TypeSafeMatcher
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @LargeTest
-@RunWith(AndroidJUnit4::class)
-class DetailAlbumActivityTest{
+@RunWith(androidx.test.ext.junit.runners.AndroidJUnit4::class)
+class RecordMainActiviteNavigate1ItemTest2 {
+
     @Rule
     @JvmField
     var mActivityTestRule = ActivityTestRule(MainActivity::class.java)
 
     @Test
-    fun test_isAlbumDetailDisplayed() {
-        Thread.sleep(2000)
+    fun record_MainActivity_navigate_1Item_Test2() {
         val recyclerView = onView(
-            Matchers.allOf(
+            allOf(
                 withId(R.id.recyclerView),
                 childAtPosition(
                     withId(R.id.main),
@@ -42,13 +39,8 @@ class DetailAlbumActivityTest{
                 )
             )
         )
-        recyclerView.perform(
-            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
-                0,
-                ViewActions.click()
-            )
-        )
-        onView(ViewMatchers.withText("Buscando América")).check(matches(isDisplayed()))
+        recyclerView.perform(actionOnItemAtPosition<ViewHolder>(0, click()))
+        onView(withText("Buscando América")).check(matches(isDisplayed()))
     }
 
 

@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:text="@string/artista_label"
+            android:text="@string/artist_label"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +67,7 @@
 
 
         <TextView
-            android:id="@+id/textLabelFecha"
+            android:id="@+id/textLabelDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -85,13 +85,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
             android:textColor="@color/black"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textLabelFecha"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textLabelDate"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textLabelFecha"
+            app:layout_constraintStart_toEndOf="@+id/textLabelDate"
             tools:text="2021-11-07" />
 
         <TextView
-            android:id="@+id/textLabelGenero"
+            android:id="@+id/textLabelGenre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -100,7 +100,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textLabelFecha" />
+            app:layout_constraintTop_toBottomOf="@+id/textLabelDate" />
 
         <TextView
             android:id="@+id/textContentGenre"
@@ -108,8 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textColor="@color/black"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textLabelGenero"
-            app:layout_constraintStart_toEndOf="@+id/textLabelGenero"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textLabelGenre"
+            app:layout_constraintStart_toEndOf="@+id/textLabelGenre"
             tools:text="Pop Rock Latino " />
 
         <TextView
@@ -147,7 +147,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textLabelRecord" />
 
         <TextView
-            android:id="@+id/textContentDescrption"
+            android:id="@+id/textContentDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
