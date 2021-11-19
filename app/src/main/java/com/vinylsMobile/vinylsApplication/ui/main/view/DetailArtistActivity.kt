@@ -1,5 +1,6 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
+import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -102,5 +103,14 @@ class DetailArtistActivity : AppCompatActivity() {
         return super.onContextItemSelected(item)
     }
 
+    // Override  supportActionBar?.setDisplayHomeAsUpEnabled , close current activity
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.home) {
+            onBackPressed()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 }

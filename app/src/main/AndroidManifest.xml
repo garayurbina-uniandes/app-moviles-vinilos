@@ -16,11 +16,13 @@
             android:name="com.vinylsMobile.vinylsApplication.ui.main.view.DetailAlbumActivity"
             android:exported="false"
             android:label="@string/title_activity_detail_album"
+            android:parentActivityName=".ui.main.view.MainActivity"
             android:theme="@style/Theme.VinylsApplication.NoActionBar" />
         <activity
             android:name="com.vinylsMobile.vinylsApplication.ui.main.view.DetailArtistActivity"
             android:exported="false"
             android:label="@string/title_activity_detail_album"
+            android:parentActivityName=".ui.main.view.MainActivity"
             android:theme="@style/Theme.VinylsApplication.NoActionBar" />
         <activity
             android:name="com.vinylsMobile.vinylsApplication.ui.main.view.MainActivity"
