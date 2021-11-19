@@ -26,7 +26,7 @@ import com.vinylsMobile.vinylsApplication.utils.Status
 class AlbumListFragment : Fragment() {
     private lateinit var mainViewModel: MainViewModel
     private lateinit var adapter: MainAdapter
-    private lateinit var binding:FragmentAlbumListBinding
+    private lateinit var binding: FragmentAlbumListBinding
 
     private fun setupUI() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
@@ -91,9 +91,9 @@ class AlbumListFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() :AlbumListFragment {
+        fun newInstance(): AlbumListFragment {
             return AlbumListFragment()
-            }
+        }
     }
 
     private fun retrieveList(albums: List<AlbumResponse>) {

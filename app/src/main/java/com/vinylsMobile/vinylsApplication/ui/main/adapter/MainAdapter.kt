@@ -13,10 +13,11 @@ import com.vinylsMobile.vinylsApplication.ui.main.view.DetailAlbumActivity
 
 const val ID = "id"
 
-class MainAdapter (private val albums: ArrayList<AlbumResponse>
+class MainAdapter(
+    private val albums: ArrayList<AlbumResponse>
 ) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
-    lateinit var context : Context
+    lateinit var context: Context
 
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {

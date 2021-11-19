@@ -7,12 +7,12 @@ import com.vinylsMobile.vinylsApplication.data.repository.ArtistRepository
 import com.vinylsMobile.vinylsApplication.utils.Resource
 import kotlinx.coroutines.Dispatchers
 
-class ArtistViewModel(private val ArtistRepository: ArtistRepository): ViewModel() {
+class ArtistViewModel(private val ArtistRepository: ArtistRepository) : ViewModel() {
 
     fun getArtists() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = ArtistRepository.getMusicians()+ArtistRepository.getBands()))
+            emit(Resource.success(data = ArtistRepository.getBands() + ArtistRepository.getMusicians()))
         } catch (exception: Exception) {
             emit(Resource.error(data = null, msg = exception.message ?: "Un error ha ocurrido!"))
         }

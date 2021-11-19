@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        val navHostFragment = supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
 
         navController = navHostFragment.navController
 
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                 binding.bottomNavigationView.menu.getItem(0).itemId-> {
+                binding.bottomNavigationView.menu.getItem(0).itemId -> {
                     setFragment(AlbumListFragment.newInstance())
                     return@setOnItemSelectedListener true
                 }
@@ -45,14 +46,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setFragment(fr : Fragment){
+    private fun setFragment(fr: Fragment) {
         val frag = supportFragmentManager.beginTransaction()
-        frag.replace(binding.navHostFragment.id,fr).setCustomAnimations(R.anim.slide_in ,R.anim.fade_out,R.anim.fade_in, R.anim.slide_out)
+        frag.replace(binding.navHostFragment.id, fr)
+            .setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out)
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
             .addToBackStack(null)
             .commit()
     }
-
 
 
 }

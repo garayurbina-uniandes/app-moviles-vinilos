@@ -9,7 +9,6 @@
         android:id="@+id/fragmentAlbumList"
         android:name="com.vinylsMobile.vinylsApplication.ui.main.view.AlbumListFragment"
         android:label="VinylsApplication"
-        tools:layout="@layout/fragment_album_list" >
-    </fragment>
+        tools:layout="@layout/fragment_album_list"></fragment>
 
 </navigation>

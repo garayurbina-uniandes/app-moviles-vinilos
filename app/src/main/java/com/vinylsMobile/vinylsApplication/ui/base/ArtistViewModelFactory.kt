@@ -6,7 +6,7 @@ import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsApplication.data.repository.ArtistRepository
 import com.vinylsMobile.vinylsApplication.ui.main.viewmodel.ArtistViewModel
 
-class ArtistViewModelFactory (private val apiHelper: ApiHelper) : ViewModelProvider.Factory {
+class ArtistViewModelFactory(private val apiHelper: ApiHelper) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(ArtistViewModel::class.java)) {
@@ -14,4 +14,4 @@ class ArtistViewModelFactory (private val apiHelper: ApiHelper) : ViewModelProvi
         }
         throw IllegalArgumentException("Clase desconocida")
     }
-    }
+}

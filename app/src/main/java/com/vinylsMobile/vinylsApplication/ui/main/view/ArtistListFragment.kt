@@ -26,7 +26,7 @@ import com.vinylsMobile.vinylsApplication.utils.Status
 class ArtistListFragment : Fragment() {
     private lateinit var artistViewModel: ArtistViewModel
     private lateinit var adapter: ArtistAdapter
-    private lateinit var binding:FragmentArtistListBinding
+    private lateinit var binding: FragmentArtistListBinding
 
     private fun setupUI() {
         binding.recyclerViewArtist.layoutManager = LinearLayoutManager(this.context)
@@ -41,7 +41,7 @@ class ArtistListFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        artistViewModel.getArtists().observe(viewLifecycleOwner,  {
+        artistViewModel.getArtists().observe(viewLifecycleOwner, {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
@@ -98,9 +98,9 @@ class ArtistListFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() :ArtistListFragment {
+        fun newInstance(): ArtistListFragment {
             return ArtistListFragment()
-            }
+        }
     }
 
 }

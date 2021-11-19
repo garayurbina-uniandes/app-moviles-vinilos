@@ -15,7 +15,7 @@ import org.junit.runner.RunWith
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
-class MainActivityTest{
+class MainActivityTest {
 
     @Test
     fun test_isMainActivityInView() {
@@ -29,6 +29,7 @@ class MainActivityTest{
         Thread.sleep(4000)
         onView(ViewMatchers.withText("Poeta del pueblo")).check(matches(isDisplayed()))
     }
+
     @Test
     fun test_isNBuscandoAmericaInView() {
         val activityScenario = ActivityScenario.launch(MainActivity::class.java)

@@ -7,21 +7,22 @@ import com.bumptech.glide.Glide
 import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
 
-class DetailArtistAdapter (private val artistDetail: ArtistResponse,private val isBand: Boolean)  {
+class DetailArtistAdapter(private val artistDetail: ArtistResponse, private val isBand: Boolean) {
 
     fun adaptData(binding: ActivityDetailArtistBinding) {
         Glide.with(binding.imageViewArtist.context)
             .load(artistDetail.image)
             .into(binding.imageViewArtist)
-        binding.textContentArtist.text=artistDetail.name
-        binding.textContentDate.text=if(isBand)artistDetail.creationDate.toString()else artistDetail.birthDate.toString()
-        binding.textContentDescription.text=artistDetail.description
+        binding.textContentArtist.text = artistDetail.name
+        binding.textContentDate.text =
+            if (isBand) artistDetail.creationDate.toString() else artistDetail.birthDate.toString()
+        binding.textContentDescription.text = artistDetail.description
         adaptTablePrizes(binding)
         adaptTableALbums(binding)
 
-        }
+    }
 
-    private fun adaptTableALbums(binding: ActivityDetailArtistBinding){
+    private fun adaptTableALbums(binding: ActivityDetailArtistBinding) {
         val row = TableRow(binding.root.context)
 
         val nombreAlbum = TextView(binding.root.context)
@@ -37,7 +38,7 @@ class DetailArtistAdapter (private val artistDetail: ArtistResponse,private val 
         }
     }
 
-    private fun adaptTablePrizes(binding: ActivityDetailArtistBinding){
+    private fun adaptTablePrizes(binding: ActivityDetailArtistBinding) {
         val row = TableRow(binding.root.context)
 
         val fecha = TextView(binding.root.context)
@@ -48,4 +49,4 @@ class DetailArtistAdapter (private val artistDetail: ArtistResponse,private val 
             binding.tablePrizes.addView(row)
         }
     }
-    }
+}

@@ -15,10 +15,11 @@ const val artist = "band"
 const val bandText = "Band"
 const val musicText = "Musician"
 
-class ArtistAdapter (private val artists: ArrayList<ArtistResponse>
+class ArtistAdapter(
+    private val artists: ArrayList<ArtistResponse>
 ) : RecyclerView.Adapter<ArtistAdapter.DataViewHolder>() {
 
-    lateinit var context : Context
+    lateinit var context: Context
 
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -26,7 +27,8 @@ class ArtistAdapter (private val artists: ArrayList<ArtistResponse>
         fun bind(artist: ArtistResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = artist.name
-                bindPar.textViewUserEmail.text = if(artist.birthDate==null) bandText else musicText
+                bindPar.textViewUserEmail.text =
+                    if (artist.birthDate == null) bandText else musicText
                 Glide.with(bindPar.imageViewAvatar.context)
                     .load(artist.image)
                     .into(bindPar.imageViewAvatar)
@@ -47,7 +49,7 @@ class ArtistAdapter (private val artists: ArrayList<ArtistResponse>
         holder.bindPar.root.setOnClickListener {
             val intent = Intent(context, DetailArtistActivity::class.java).apply {
                 putExtra(IdArtist, artists[position].id.toString())
-                putExtra(artist,if(artists[position].birthDate==null) bandText else musicText)
+                putExtra(artist, if (artists[position].birthDate == null) bandText else musicText)
             }
 
             context.startActivity(intent)

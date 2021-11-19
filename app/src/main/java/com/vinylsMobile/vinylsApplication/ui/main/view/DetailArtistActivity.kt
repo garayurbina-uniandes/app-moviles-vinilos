@@ -36,10 +36,9 @@ class DetailArtistActivity : AppCompatActivity() {
 
         setupViewModel()
 
-        if (artistType=="Band"){
+        if (artistType == "Band") {
             setupBandObservers(intent.getStringExtra(IdArtist)!!)
-        }
-        else{
+        } else {
             setupMusiciansObservers(intent.getStringExtra(IdArtist)!!)
         }
 
@@ -52,12 +51,17 @@ class DetailArtistActivity : AppCompatActivity() {
         )[ArtistViewModel::class.java]
     }
 
-    private fun setupMusiciansObservers(id:String) {
-        artistViewModel.getMusiciansDetail(id).observe(this,  {
+    private fun setupMusiciansObservers(id: String) {
+        artistViewModel.getMusiciansDetail(id).observe(this, {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
-                        resource.data?.let { artistDetail -> retrieveArtistDetail(artistDetail,false) }
+                        resource.data?.let { artistDetail ->
+                            retrieveArtistDetail(
+                                artistDetail,
+                                false
+                            )
+                        }
                     }
                     Status.ERROR -> {
                         Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
@@ -69,12 +73,17 @@ class DetailArtistActivity : AppCompatActivity() {
         })
     }
 
-    private fun setupBandObservers(id:String) {
+    private fun setupBandObservers(id: String) {
         artistViewModel.getBandsDetail(id).observe(this, {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
-                        resource.data?.let { artistDetail -> retrieveArtistDetail(artistDetail,true) }
+                        resource.data?.let { artistDetail ->
+                            retrieveArtistDetail(
+                                artistDetail,
+                                true
+                            )
+                        }
                     }
                     Status.ERROR -> {
                         Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
@@ -86,9 +95,9 @@ class DetailArtistActivity : AppCompatActivity() {
         })
     }
 
-    private fun retrieveArtistDetail(artist: ArtistResponse,isBand: Boolean) {
-        supportActionBar?.title =artist.name
-        adapter = DetailArtistAdapter(artist,isBand)
+    private fun retrieveArtistDetail(artist: ArtistResponse, isBand: Boolean) {
+        supportActionBar?.title = artist.name
+        adapter = DetailArtistAdapter(artist, isBand)
         adapter.adaptData(binding)
 
     }

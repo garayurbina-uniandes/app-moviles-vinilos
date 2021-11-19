@@ -30,7 +30,7 @@ class DetailAlbumActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-       val id = intent.getStringExtra(ID)!!
+        val id = intent.getStringExtra(ID)!!
 
         setupViewModel()
         setupObservers(id)
@@ -43,7 +43,7 @@ class DetailAlbumActivity : AppCompatActivity() {
         )[MainViewModel::class.java]
     }
 
-    private fun setupObservers(id:String) {
+    private fun setupObservers(id: String) {
         mainViewModel.getAlbumDetail(id).observe(this, {
             it?.let { resource ->
                 when (resource.status) {
@@ -63,7 +63,7 @@ class DetailAlbumActivity : AppCompatActivity() {
     private fun retrieveAlbumDetail(album: AlbumResponse) {
         adapter = DetailAdapter(album)
         adapter.adaptData(binding)
-        supportActionBar?.title =album.name
+        supportActionBar?.title = album.name
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {

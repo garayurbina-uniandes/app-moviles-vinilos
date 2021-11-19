@@ -12,10 +12,11 @@ import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
 import com.vinylsMobile.vinylsApplication.databinding.ItemLayoutBinding
 
-class CollectorAdapter (private val collectors: ArrayList<CollectorResponse>
+class CollectorAdapter(
+    private val collectors: ArrayList<CollectorResponse>
 ) : RecyclerView.Adapter<CollectorAdapter.DataViewHolder>() {
 
-    lateinit var context : Context
+    lateinit var context: Context
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         private val bindPar = binding
@@ -28,7 +29,10 @@ class CollectorAdapter (private val collectors: ArrayList<CollectorResponse>
                     .error(R.drawable.ic_collector).placeholder(R.drawable.ic_collector)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(bindPar.imageViewAvatar)
-                bindPar.imageViewAvatar.setColorFilter(Color.rgb(162,0,0),PorterDuff.Mode.SRC_ATOP)
+                bindPar.imageViewAvatar.setColorFilter(
+                    Color.rgb(162, 0, 0),
+                    PorterDuff.Mode.SRC_ATOP
+                )
             }
         }
     }

@@ -25,7 +25,7 @@ import com.vinylsMobile.vinylsApplication.utils.Status
  */
 class CollectorListFragment : Fragment() {
 
-    private lateinit var binding:FragmentCollectorListBinding
+    private lateinit var binding: FragmentCollectorListBinding
     private lateinit var collectorViewModel: CollectorViewModel
     private lateinit var adapter: CollectorAdapter
 
@@ -42,7 +42,7 @@ class CollectorListFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        collectorViewModel.getColelctors().observe(viewLifecycleOwner,  {
+        collectorViewModel.getColelctors().observe(viewLifecycleOwner, {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
@@ -99,7 +99,7 @@ class CollectorListFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() :CollectorListFragment {
+        fun newInstance(): CollectorListFragment {
             return CollectorListFragment()
         }
     }

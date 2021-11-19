@@ -7,7 +7,7 @@ import com.vinylsMobile.vinylsApplication.data.repository.CollectorRepository
 import com.vinylsMobile.vinylsApplication.utils.Resource
 import kotlinx.coroutines.Dispatchers
 
-class CollectorViewModel(private val CollectorRepository:CollectorRepository): ViewModel() {
+class CollectorViewModel(private val CollectorRepository: CollectorRepository) : ViewModel() {
 
     fun getColelctors() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
