@@ -26,6 +26,8 @@ class DetailArtistActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+
         binding = ActivityDetailArtistBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

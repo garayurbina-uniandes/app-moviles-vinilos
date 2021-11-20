@@ -17,10 +17,12 @@ class DetailArtistAdapter(private val artistDetail: ArtistResponse, private val 
             .into(binding.imageViewArtist)
         binding.textContentArtist.text = artistDetail.name
         binding.textContentDate.text =
-            if (isBand) formatDate(artistDetail.creationDate) else formatDate(artistDetail.birthDate).toString()
+            if (isBand) formatDate(artistDetail.creationDate) else formatDate(artistDetail.birthDate)
         binding.textContentDescription.text = artistDetail.description
-        adaptTablePrizes(binding)
-        adaptTableALbums(binding)
+        binding.listTexAlbums.text = adaptStringAbums(binding)
+        binding.listTexPrizes.text = adaptStringPrizes(binding)
+//        adaptTablePrizes(binding)
+//        adaptTableALbums(binding)
 
     }
 
@@ -29,31 +31,49 @@ class DetailArtistAdapter(private val artistDetail: ArtistResponse, private val 
     }
 
 
-    private fun adaptTableALbums(binding: ActivityDetailArtistBinding) {
-        val row = TableRow(binding.root.context)
+//    private fun adaptTableALbums(binding: ActivityDetailArtistBinding) {
+//        val row = TableRow(binding.root.context)
+//
+//        val nombreAlbum = TextView(binding.root.context)
+//        val generoAlbum = TextView(binding.root.context)
+//
+//        for (i in artistDetail.albums) {
+//            nombreAlbum.text = i.name
+//            generoAlbum.text = i.genre
+//
+//            row.addView(nombreAlbum)
+//            row.addView(generoAlbum)
+//            binding.tableMain.addView(row)
+//
+//        }
+//    }
 
-        val nombreAlbum = TextView(binding.root.context)
-        val generoAlbum = TextView(binding.root.context)
 
-        for (i in artistDetail.albums) {
-            nombreAlbum.text = i.name
-            generoAlbum.text = i.genre
 
-            row.addView(nombreAlbum)
-            row.addView(generoAlbum)
-            binding.tableMain.addView(row)
+    private fun adaptStringAbums(binding: ActivityDetailArtistBinding): String {
+            val sb = StringBuilder()
+            for (i in artistDetail.albums) {
+                sb.append( "- ${i.name} (${DateFormat.getDateInstance(DateFormat.MEDIUM).format(i.releaseDate)})" + "\n")
+            }
+            return sb.toString()
         }
-    }
-
-    private fun adaptTablePrizes(binding: ActivityDetailArtistBinding) {
-        val row = TableRow(binding.root.context)
-
-        val fecha = TextView(binding.root.context)
+    private fun adaptStringPrizes(binding: ActivityDetailArtistBinding): String {
+        val sb = StringBuilder()
         for (i in artistDetail.performerPrizes) {
-            fecha.text = i.premiationDate.toString()
-
-            row.addView(fecha)
-            binding.tablePrizes.addView(row)
+            sb.append( "- ${formatDate(i.premiationDate)}" + "\n")
         }
+        return sb.toString()
     }
+
+//    private fun adaptTablePrizes(binding: ActivityDetailArtistBinding) {
+//        val row = TableRow(binding.root.context)
+//
+//        val fecha = TextView(binding.root.context)
+//        for (i in artistDetail.performerPrizes) {
+//            fecha.text = i.premiationDate.toString()
+//
+//            row.addView(fecha)
+//            binding.tablePrizes.addView(row)
+//        }
+//    }
 }
