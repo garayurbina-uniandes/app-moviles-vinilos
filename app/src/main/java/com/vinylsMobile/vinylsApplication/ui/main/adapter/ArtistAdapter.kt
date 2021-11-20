@@ -27,7 +27,7 @@ class ArtistAdapter(
         fun bind(artist: ArtistResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = artist.name
-                bindPar.textViewUserEmail.text =
+                bindPar.textAlbumRecord.text =
                     if (artist.birthDate == null) bandText else musicText
                 Glide.with(bindPar.imageViewAvatar.context)
                     .load(artist.image)

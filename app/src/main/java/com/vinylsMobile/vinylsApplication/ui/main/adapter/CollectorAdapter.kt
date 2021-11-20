@@ -23,7 +23,7 @@ class CollectorAdapter(
         fun bind(collector: CollectorResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = collector.name
-                bindPar.textViewUserEmail.text = collector.email
+                bindPar.textAlbumRecord.text = collector.email
                 Glide.with(bindPar.imageViewAvatar.context)
                     .load(R.drawable.ic_collector)
                     .error(R.drawable.ic_collector).placeholder(R.drawable.ic_collector)

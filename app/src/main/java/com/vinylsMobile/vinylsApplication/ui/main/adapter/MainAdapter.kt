@@ -25,7 +25,7 @@ class MainAdapter(
         fun bind(album: AlbumResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = album.name
-                bindPar.textViewUserEmail.text = album.recordLabel
+                bindPar.textAlbumRecord.text = album.recordLabel
                 Glide.with(bindPar.imageViewAvatar.context)
                     .load(album.cover)
                     .into(bindPar.imageViewAvatar)

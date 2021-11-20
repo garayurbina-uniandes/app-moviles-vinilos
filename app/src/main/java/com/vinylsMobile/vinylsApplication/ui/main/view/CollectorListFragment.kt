@@ -1,5 +1,6 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -83,6 +84,7 @@ class CollectorListFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun retrieveList(collectors: List<CollectorResponse>) {
         adapter.apply {
             addCollectors(collectors)

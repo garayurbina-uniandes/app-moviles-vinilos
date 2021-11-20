@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewUserEmail"
+        android:id="@+id/textAlbumRecord"
         android:layout_width="0dp"
         android:layout_height="20dp"
         android:fontFamily="@font/roboto_thin"
