@@ -143,7 +143,6 @@
                 android:layout_marginStart="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textLabelAlbums">
-
             </TableLayout>
 
             <TextView

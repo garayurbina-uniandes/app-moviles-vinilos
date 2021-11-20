@@ -6,6 +6,8 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
+import java.text.DateFormat
+import java.util.*
 
 class DetailArtistAdapter(private val artistDetail: ArtistResponse, private val isBand: Boolean) {
 
@@ -15,12 +17,17 @@ class DetailArtistAdapter(private val artistDetail: ArtistResponse, private val 
             .into(binding.imageViewArtist)
         binding.textContentArtist.text = artistDetail.name
         binding.textContentDate.text =
-            if (isBand) artistDetail.creationDate.toString() else artistDetail.birthDate.toString()
+            if (isBand) formatDate(artistDetail.creationDate) else formatDate(artistDetail.birthDate).toString()
         binding.textContentDescription.text = artistDetail.description
         adaptTablePrizes(binding)
         adaptTableALbums(binding)
 
     }
+
+    private fun formatDate(date: Date?): String {
+        return DateFormat.getDateInstance(DateFormat.LONG).format(date).toString()
+    }
+
 
     private fun adaptTableALbums(binding: ActivityDetailArtistBinding) {
         val row = TableRow(binding.root.context)
