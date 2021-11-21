@@ -1,0 +1,16 @@
+com/vinylsMobile/vinylsApplication/databinding/FragmentAlbumListBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.FragmentAlbumListBinding
+com/vinylsMobile/vinylsApplication/databinding/ActivityDetailAlbumBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.ActivityDetailAlbumBinding
+com/vinylsMobile/vinylsApplication/databinding/FragmentArtistListBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.FragmentArtistListBinding
+com/vinylsMobile/vinylsApplication/databinding/ItemLayoutBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.ItemLayoutBinding
+com/vinylsMobile/vinylsApplication/databinding/FragmentCollectorListBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.FragmentCollectorListBinding
+com/vinylsMobile/vinylsApplication/databinding/ActivityMainBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.ActivityMainBinding
+com/vinylsMobile/vinylsApplication/databinding/ActivityDetailArtistBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
+com/vinylsMobile/vinylsApplication/BuildConfig.java
+ com.vinylsMobile.vinylsApplication.BuildConfig
