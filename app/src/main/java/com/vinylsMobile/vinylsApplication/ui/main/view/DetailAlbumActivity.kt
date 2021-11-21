@@ -64,6 +64,7 @@ class DetailAlbumActivity : AppCompatActivity() {
         adapter = DetailAdapter(album)
         adapter.adaptData(binding)
         supportActionBar?.title = album.name
+        supportActionBar?.subtitle = "Album"
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {

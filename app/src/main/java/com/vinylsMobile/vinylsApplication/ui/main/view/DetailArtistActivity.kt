@@ -99,6 +99,7 @@ class DetailArtistActivity : AppCompatActivity() {
 
     private fun retrieveArtistDetail(artist: ArtistResponse, isBand: Boolean) {
         supportActionBar?.title = artist.name
+        supportActionBar?.subtitle = "Artista"
         adapter = DetailArtistAdapter(artist, isBand)
         adapter.adaptData(binding)
 
