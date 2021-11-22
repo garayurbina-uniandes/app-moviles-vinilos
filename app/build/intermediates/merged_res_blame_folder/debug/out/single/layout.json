@@ -1,30 +1,30 @@
 [
     {
-        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_album.xml",
-        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_detail_album.xml"
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_artist_list.xml",
-        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/fragment_artist_list.xml"
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_album_list.xml",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\layout\\fragment_album_list.xml"
     },
     {
-        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_main.xml"
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_artist_list.xml",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\layout\\fragment_artist_list.xml"
     },
     {
-        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_layout.xml",
-        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/item_layout.xml"
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_layout.xml",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\layout\\item_layout.xml"
     },
     {
-        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_collector_list.xml",
-        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/fragment_collector_list.xml"
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_collector_list.xml",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\layout\\fragment_collector_list.xml"
     },
     {
-        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_album_list.xml",
-        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/fragment_album_list.xml"
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_artist.xml",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\layout\\activity_detail_artist.xml"
     },
     {
-        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_artist.xml",
-        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_detail_artist.xml"
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_album.xml",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\layout\\activity_detail_album.xml"
     }
 ]
