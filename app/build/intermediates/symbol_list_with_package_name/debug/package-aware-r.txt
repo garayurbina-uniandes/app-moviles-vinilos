@@ -2135,6 +2135,7 @@ id linear
 id listMode
 id listTexAlbums
 id listTexPrizes
+id listTexTracks
 id list_item
 id main
 id masked
@@ -2194,6 +2195,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_album_add_song
 id nav_controller_view_tag
 id nav_graph_xml
 id nav_graph_album
@@ -2347,6 +2349,7 @@ id textContentRecord
 id textEnd
 id textLabelAlbums
 id textLabelArtist
+id textLabelCanciones
 id textLabelDate
 id textLabelDescription
 id textLabelGenre
@@ -2577,6 +2580,7 @@ layout text_view_without_line_height
 menu bottom_navigation_menu
 menu example_menu
 menu example_menu2
+menu submenu_album
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph_album
@@ -2709,6 +2713,8 @@ string record_label
 string retry
 string search_menu_title
 string status_bar_notification_info_overflow
+string sub_menu_album_options
+string tracks_label
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

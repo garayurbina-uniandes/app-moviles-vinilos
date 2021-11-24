@@ -64,6 +64,10 @@
         "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_collector.png"
     },
     {
+        "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\merged_res\\debug\\menu_submenu_album.xml.flat",
+        "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\menu\\submenu_album.xml"
+    },
+    {
         "merged": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\merged_res\\debug\\anim_fade_in.xml.flat",
         "source": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\src\\main\\res\\anim\\fade_in.xml"
     },
