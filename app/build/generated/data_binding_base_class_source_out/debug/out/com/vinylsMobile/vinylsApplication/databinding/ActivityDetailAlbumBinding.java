@@ -36,6 +36,9 @@ public final class ActivityDetailAlbumBinding implements ViewBinding {
   public final ImageView imageView2;
 
   @NonNull
+  public final TextView listTexTracks;
+
+  @NonNull
   public final TextView textContentArtist;
 
   @NonNull
@@ -52,6 +55,9 @@ public final class ActivityDetailAlbumBinding implements ViewBinding {
 
   @NonNull
   public final TextView textLabelArtist;
+
+  @NonNull
+  public final TextView textLabelCanciones;
 
   @NonNull
   public final TextView textLabelDate;
@@ -71,9 +77,10 @@ public final class ActivityDetailAlbumBinding implements ViewBinding {
   private ActivityDetailAlbumBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AppBarLayout appBarLayout, @NonNull ConstraintLayout constraintLayout,
       @NonNull CoordinatorLayout detailAlbum, @NonNull ImageView imageView2,
-      @NonNull TextView textContentArtist, @NonNull TextView textContentDate,
-      @NonNull TextView textContentDescription, @NonNull TextView textContentGenre,
-      @NonNull TextView textContentRecord, @NonNull TextView textLabelArtist,
+      @NonNull TextView listTexTracks, @NonNull TextView textContentArtist,
+      @NonNull TextView textContentDate, @NonNull TextView textContentDescription,
+      @NonNull TextView textContentGenre, @NonNull TextView textContentRecord,
+      @NonNull TextView textLabelArtist, @NonNull TextView textLabelCanciones,
       @NonNull TextView textLabelDate, @NonNull TextView textLabelDescription,
       @NonNull TextView textLabelGenre, @NonNull TextView textLabelRecord,
       @NonNull Toolbar toolbar) {
@@ -82,12 +89,14 @@ public final class ActivityDetailAlbumBinding implements ViewBinding {
     this.constraintLayout = constraintLayout;
     this.detailAlbum = detailAlbum;
     this.imageView2 = imageView2;
+    this.listTexTracks = listTexTracks;
     this.textContentArtist = textContentArtist;
     this.textContentDate = textContentDate;
     this.textContentDescription = textContentDescription;
     this.textContentGenre = textContentGenre;
     this.textContentRecord = textContentRecord;
     this.textLabelArtist = textLabelArtist;
+    this.textLabelCanciones = textLabelCanciones;
     this.textLabelDate = textLabelDate;
     this.textLabelDescription = textLabelDescription;
     this.textLabelGenre = textLabelGenre;
@@ -142,6 +151,12 @@ public final class ActivityDetailAlbumBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.listTexTracks;
+      TextView listTexTracks = ViewBindings.findChildViewById(rootView, id);
+      if (listTexTracks == null) {
+        break missingId;
+      }
+
       id = R.id.textContentArtist;
       TextView textContentArtist = ViewBindings.findChildViewById(rootView, id);
       if (textContentArtist == null) {
@@ -178,6 +193,12 @@ public final class ActivityDetailAlbumBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textLabelCanciones;
+      TextView textLabelCanciones = ViewBindings.findChildViewById(rootView, id);
+      if (textLabelCanciones == null) {
+        break missingId;
+      }
+
       id = R.id.textLabelDate;
       TextView textLabelDate = ViewBindings.findChildViewById(rootView, id);
       if (textLabelDate == null) {
@@ -209,9 +230,10 @@ public final class ActivityDetailAlbumBinding implements ViewBinding {
       }
 
       return new ActivityDetailAlbumBinding((CoordinatorLayout) rootView, appBarLayout,
-          constraintLayout, detailAlbum, imageView2, textContentArtist, textContentDate,
-          textContentDescription, textContentGenre, textContentRecord, textLabelArtist,
-          textLabelDate, textLabelDescription, textLabelGenre, textLabelRecord, toolbar);
+          constraintLayout, detailAlbum, imageView2, listTexTracks, textContentArtist,
+          textContentDate, textContentDescription, textContentGenre, textContentRecord,
+          textLabelArtist, textLabelCanciones, textLabelDate, textLabelDescription, textLabelGenre,
+          textLabelRecord, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
