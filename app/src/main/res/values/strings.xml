@@ -15,4 +15,5 @@
     <string name="menu_album__label">Albums</string>
     <string name="menu_artist_label">Artists</string>
     <string name="menu_collector_label">Collectors</string>
+    <string name="sub_menu_album_options">Agregar Canción</string>
 </resources>

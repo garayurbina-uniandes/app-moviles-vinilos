@@ -1,10 +1,12 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
+import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsApplication.data.api.RetrofitBuilder
 import com.vinylsMobile.vinylsApplication.data.model.AlbumResponse
@@ -34,6 +36,18 @@ class DetailAlbumActivity : AppCompatActivity() {
 
         setupViewModel()
         setupObservers(id)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.submenu_album,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.nav_album_add_song -> Toast.makeText(this,"open add song", Toast.LENGTH_SHORT).show()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun setupViewModel() {
