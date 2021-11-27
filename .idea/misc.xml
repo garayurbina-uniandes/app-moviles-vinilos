@@ -18,13 +18,14 @@
         <entry key="app/src/main/res/layout/activity_albums_list.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_detail_album.xml" value="0.3208888888888889" />
         <entry key="app/src/main/res/layout/activity_detail_artist.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_detail_collector.xml" value="0.1640625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_retrofit.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_albums_list.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/content_detail_album.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/fragment_album_list.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/fragment_artist_list.xml" value="0.15896739130434784" />
-        <entry key="app/src/main/res/layout/fragment_collector_list.xml" value="0.15896739130434784" />
+        <entry key="app/src/main/res/layout/fragment_collector_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17889492753623187" />

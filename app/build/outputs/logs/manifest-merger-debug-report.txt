@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
+ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] /home/claudia/.gradle/caches/transforms-3/119217694d324432b60b6cb1bf0212d0/transformed/jetified-viewbinding-7.0.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-dynamic-features-fragment:2.3.5] /home/claudia/.gradle/caches/transforms-3/b1bb3135e5fbfddafd8631ba63027b7d/transformed/jetified-navigation-dynamic-features-fragment-2.3.5/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] /home/claudia/.gradle/caches/transforms-3/684105cd3e6ac5c9120a33f788145aaf/transformed/navigation-fragment-ktx-2.3.5/AndroidManifest.xml:17:1-24:12
@@ -70,20 +70,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.4.0] /home/claudia/.gr
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/claudia/.gradle/caches/transforms-3/b02ee0dc154ea8fc0edf2ba3acf7bc41/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/claudia/.gradle/caches/transforms-3/4501bb6c1b16d6c9ef0938c5a599105f/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.play:core:1.9.1] /home/claudia/.gradle/caches/transforms-3/3b0661b3fa4221909ce354eacc7e2921/transformed/jetified-core-1.9.1/AndroidManifest.xml:2:1-23:12
-INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml
 		INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml
-		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
 		INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml
-		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-40:12
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:1-45:12
 		INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:2:11-69
@@ -92,7 +92,7 @@ ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/
 	android:name
 		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:7:5-38:19
+ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:7:5-43:19
 MERGED from [com.google.android.material:material:1.4.0] /home/claudia/.gradle/caches/transforms-3/b64c581a9daa138f08ffadfeafcf90fd/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /home/claudia/.gradle/caches/transforms-3/b64c581a9daa138f08ffadfeafcf90fd/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] /home/claudia/.gradle/caches/transforms-3/c6e6b7c8875e264f9f97d3822c951574/transformed/constraintlayout-2.1.1/AndroidManifest.xml:9:5-20
@@ -163,12 +163,22 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
 		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:31:27-74
-meta-data#preloaded_fonts
-ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:35:9-37:57
-	android:resource
-		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:37:13-54
+activity#com.vinylsMobile.vinylsApplication.ui.main.view.DetailCollectorActivity
+ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:34:9-38:74
+	android:parentActivityName
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:37:13-68
+	android:exported
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:36:13-37
+	android:theme
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:38:13-71
 	android:name
-		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:36:13-43
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:35:13-99
+meta-data#preloaded_fonts
+ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:40:9-42:57
+	android:resource
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:42:13-54
+	android:name
+		ADDED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml:41:13-43
 uses-sdk
 INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/AndroidManifest.xml

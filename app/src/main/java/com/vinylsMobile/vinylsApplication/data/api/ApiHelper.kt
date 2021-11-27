@@ -10,5 +10,5 @@ class ApiHelper(private val apiService: ApiService) {
     suspend fun getBandsDetail(id: String) = apiService.getBandsDetail(id)
     suspend fun getMusiciansDetail(id: String) = apiService.getMusiciansDetail(id)
     suspend fun getCollectors() = apiService.getCollectors()
-
+    suspend fun getCollectorsDetail(id:String) = apiService.getCollectorsDetail(id)
 }
