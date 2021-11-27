@@ -4,7 +4,6 @@ package com.vinylsMobile.vinylsApplication.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,9 +44,6 @@ public final class ActivityDetailCollectorBinding implements ViewBinding {
   public final TextView favoritePerformers;
 
   @NonNull
-  public final ImageView imageView3;
-
-  @NonNull
   public final TextView textContentCollector;
 
   @NonNull
@@ -60,9 +56,8 @@ public final class ActivityDetailCollectorBinding implements ViewBinding {
       @NonNull AppBarLayout appBarLayout, @NonNull TextView collectorLabel,
       @NonNull TextView comments, @NonNull ConstraintLayout constraintLayout,
       @NonNull TextView contentFavoritePerformers, @NonNull CoordinatorLayout detailAlbum,
-      @NonNull TextView favoritePerformers, @NonNull ImageView imageView3,
-      @NonNull TextView textContentCollector, @NonNull TextView textContentComments,
-      @NonNull Toolbar toolbar) {
+      @NonNull TextView favoritePerformers, @NonNull TextView textContentCollector,
+      @NonNull TextView textContentComments, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.appBarLayout = appBarLayout;
     this.collectorLabel = collectorLabel;
@@ -71,7 +66,6 @@ public final class ActivityDetailCollectorBinding implements ViewBinding {
     this.contentFavoritePerformers = contentFavoritePerformers;
     this.detailAlbum = detailAlbum;
     this.favoritePerformers = favoritePerformers;
-    this.imageView3 = imageView3;
     this.textContentCollector = textContentCollector;
     this.textContentComments = textContentComments;
     this.toolbar = toolbar;
@@ -142,12 +136,6 @@ public final class ActivityDetailCollectorBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView3;
-      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView3 == null) {
-        break missingId;
-      }
-
       id = R.id.textContentCollector;
       TextView textContentCollector = ViewBindings.findChildViewById(rootView, id);
       if (textContentCollector == null) {
@@ -168,7 +156,7 @@ public final class ActivityDetailCollectorBinding implements ViewBinding {
 
       return new ActivityDetailCollectorBinding((CoordinatorLayout) rootView, appBarLayout,
           collectorLabel, comments, constraintLayout, contentFavoritePerformers, detailAlbum,
-          favoritePerformers, imageView3, textContentCollector, textContentComments, toolbar);
+          favoritePerformers, textContentCollector, textContentComments, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

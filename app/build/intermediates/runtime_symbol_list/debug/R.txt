@@ -2111,7 +2111,6 @@ int id ignore 0x7f0a00e1
 int id ignoreRequest 0x7f0a00e2
 int id image 0x7f0a00e3
 int id imageView2 0x7f0a00e4
-int id imageView3 0x7f0a00e5
 int id imageViewArtist 0x7f0a00e6
 int id imageViewAvatar 0x7f0a00e7
 int id immediateStop 0x7f0a00e8

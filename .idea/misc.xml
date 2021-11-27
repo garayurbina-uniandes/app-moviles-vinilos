@@ -25,7 +25,7 @@
         <entry key="app/src/main/res/layout/content_detail_album.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/fragment_album_list.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/fragment_artist_list.xml" value="0.15896739130434784" />
-        <entry key="app/src/main/res/layout/fragment_collector_list.xml" value="0.15896739130434784" />
+        <entry key="app/src/main/res/layout/fragment_collector_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17889492753623187" />
