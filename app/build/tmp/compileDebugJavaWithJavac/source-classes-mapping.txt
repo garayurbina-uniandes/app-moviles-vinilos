@@ -12,5 +12,7 @@ com/vinylsMobile/vinylsApplication/databinding/ActivityMainBinding.java
  com.vinylsMobile.vinylsApplication.databinding.ActivityMainBinding
 com/vinylsMobile/vinylsApplication/databinding/ActivityDetailArtistBinding.java
  com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
+com/vinylsMobile/vinylsApplication/databinding/ActivityDetailCollectorBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.ActivityDetailCollectorBinding
 com/vinylsMobile/vinylsApplication/BuildConfig.java
  com.vinylsMobile.vinylsApplication.BuildConfig

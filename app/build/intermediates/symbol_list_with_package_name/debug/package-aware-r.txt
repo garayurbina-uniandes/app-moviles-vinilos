@@ -2011,12 +2011,15 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id collector_label
+id comments
 id confirm_button
 id constraint
 id constraintLayout
 id container
 id content
 id contentPanel
+id content_favorite_performers
 id contiguous
 id continuousVelocity
 id coordinator
@@ -2072,6 +2075,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id favorite_performers
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2342,6 +2346,8 @@ id text
 id text2
 id textAlbumRecord
 id textContentArtist
+id textContentCollector
+id textContentComments
 id textContentDate
 id textContentDescription
 id textContentGenre
@@ -2478,6 +2484,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_detail_album
 layout activity_detail_artist
+layout activity_detail_collector
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2626,6 +2633,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string collector_label
+string comments
 string date_label
 string description_label
 string detail_album_description_image
@@ -2634,6 +2643,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string favorite_performers
 string genre_label
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -2641,6 +2651,7 @@ string installation_cancelled
 string installation_failed
 string installing_module
 string item_layout_description_image
+string item_layout_detail_colector
 string item_view_role_description
 string material_clock_display_divider
 string material_clock_toggle_content_description

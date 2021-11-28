@@ -1,4 +1,8 @@
-#Wed Nov 24 17:43:21 COT 2021
+<<<<<<< HEAD
+#Sat Nov 27 16:33:01 COT 2021
+=======
+#Sun Nov 21 23:29:38 COT 2021
+>>>>>>> 12a19f43b44fa44c7f89b7a653bd2c55c1cda0f1
 path.4=4/classes.dex
 path.3=3/classes.dex
 path.2=11/classes.dex

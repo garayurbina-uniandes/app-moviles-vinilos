@@ -44,6 +44,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.vinylsMobile.vinylsApplication.ui.main.view.DetailCollectorActivity"
+            android:exported="false"
+            android:parentActivityName="com.vinylsMobile.vinylsApplication.ui.main.view.MainActivity"
+            android:theme="@style/Theme.VinylsApplication.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
