@@ -21,4 +21,7 @@
     <string name="menu_collector_label">Collectors</string>
     <string name="sub_menu_album_options">Agregar Canción</string>
     <string name="tracks_label">Canciones:</string>
+    <string name="form_name_song">Nombre Canción</string>
+    <string name="form_song_min">min</string>
+    <string name="form_song_seg">seg</string>
 </resources>

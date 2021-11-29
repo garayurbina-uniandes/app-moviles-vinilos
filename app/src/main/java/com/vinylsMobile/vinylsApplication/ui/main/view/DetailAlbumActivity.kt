@@ -1,5 +1,6 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -22,6 +23,7 @@ class DetailAlbumActivity : AppCompatActivity() {
     private lateinit var adapter: DetailAdapter
 
     private lateinit var binding: ActivityDetailAlbumBinding
+    private lateinit var idAlbum: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,7 @@ class DetailAlbumActivity : AppCompatActivity() {
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val id = intent.getStringExtra(ID)!!
+        idAlbum = id
 
         setupViewModel()
         setupObservers(id)
@@ -40,12 +43,14 @@ class DetailAlbumActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.submenu_album,menu)
-        return true
+        return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.nav_album_add_song -> Toast.makeText(this,"open add song", Toast.LENGTH_SHORT).show()
+            R.id.nav_album_add_song -> {
+                launchAlbumTrackActivityView(idAlbum)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -79,6 +84,12 @@ class DetailAlbumActivity : AppCompatActivity() {
         adapter.adaptData(binding)
         supportActionBar?.title = album.name
         supportActionBar?.subtitle = "Album"
+    }
+
+    private fun launchAlbumTrackActivityView(albumId: String) {
+        val intent = Intent(this, AlbumTrackActivity::class.java)
+        intent.putExtra("idAlbum", albumId)
+        startActivity(intent)
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {

@@ -1,11 +1,16 @@
 package com.vinylsMobile.vinylsApplication.data.api
 
 
+import com.google.gson.JsonObject
 import com.vinylsMobile.vinylsApplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
+import com.vinylsMobile.vinylsApplication.data.model.TracksResponse
+import retrofit2.Call
+import retrofit2.http.Body
 
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
@@ -32,4 +37,7 @@ interface ApiService {
 
     @GET("collectors/{id}")
     suspend fun getCollectorsDetail(@Path("id") id: String): CollectorResponse
+
+    @POST("albums/{id}/tracks")
+    suspend fun postAlbumTrack(@Path("id") id: String, @Body track: JsonObject): Call<TracksResponse>
 }
