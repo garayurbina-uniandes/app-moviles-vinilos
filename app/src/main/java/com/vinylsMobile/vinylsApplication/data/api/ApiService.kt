@@ -39,5 +39,5 @@ interface ApiService {
     suspend fun getCollectorsDetail(@Path("id") id: String): CollectorResponse
 
     @POST("albums/{id}/tracks")
-    suspend fun postAlbumTrack(@Path("id") id: String, @Body track: JsonObject): Call<TracksResponse>
+    suspend fun postAlbumTrack(@Path("id") id: String, @Body track: JsonObject): AlbumResponse
 }

@@ -90,6 +90,7 @@ class DetailAlbumActivity : AppCompatActivity() {
         val intent = Intent(this, AlbumTrackActivity::class.java)
         intent.putExtra("idAlbum", albumId)
         startActivity(intent)
+        this.finish()
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
@@ -101,6 +102,4 @@ class DetailAlbumActivity : AppCompatActivity() {
         }
         return super.onContextItemSelected(item)
     }
-
-
-}
+    }

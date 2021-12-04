@@ -4,13 +4,18 @@ import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.google.android.material.textfield.TextInputEditText
+import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.lifecycleScope
+import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
+import com.vinylsMobile.vinylsApplication.data.api.RetrofitBuilder
 import com.vinylsMobile.vinylsApplication.databinding.ActivityTrackAlbumBinding
+import com.vinylsMobile.vinylsApplication.ui.base.ViewModelFactory
 import com.vinylsMobile.vinylsApplication.ui.main.viewmodel.MainViewModel
+import kotlinx.coroutines.launch
 
-class AlbumTrackActivity: AppCompatActivity(){
+class AlbumTrackActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTrackAlbumBinding
     private lateinit var mainViewModel: MainViewModel
@@ -20,8 +25,9 @@ class AlbumTrackActivity: AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityTrackAlbumBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupViewModel()
 
-        var numberAlbumId : Number = 0
+        var numberAlbumId: Number = 0
         val albumId = intent.getStringExtra("idAlbum")
         val postButton: Button = binding.btnCreateTrackAlbum
         if (albumId != null) {
@@ -32,25 +38,36 @@ class AlbumTrackActivity: AppCompatActivity(){
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.idAlbum.text= albumId
+        binding.idAlbum.text = albumId
 
-        postButton.setOnClickListener{
-            val name  = binding.txtName.text.toString()
+        postButton.setOnClickListener {
+            val name = binding.txtName.text.toString()
             val input_min = binding.textMin.text.toString()
             val input_seg = binding.textSeg.text.toString()
 
             val duration = "${input_min}:${input_seg}"
-            createTrackToAlbum(name, duration,numberAlbumId)
+            createTrackToAlbum(name, duration, numberAlbumId)
             this.finish()
 
         }
     }
 
-
-    fun createTrackToAlbum(name: String, duration: String, id: Number){
-        mainViewModel.createTrackToAlbum(name, duration, id)
+    private fun setupViewModel() {
+        mainViewModel = ViewModelProviders.of(
+            this,
+            ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
+        )[MainViewModel::class.java]
     }
 
+    private fun createTrackToAlbum(name: String, duration: String, id: Number) {
+        lifecycleScope.launch {
+            mainViewModel.createTrackToAlbum(name, duration, id)
+            val toast =
+                Toast.makeText(applicationContext, "Se ha asociado el track", Toast.LENGTH_LONG)
+            toast.show()
+        }
+
+    }
 
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
