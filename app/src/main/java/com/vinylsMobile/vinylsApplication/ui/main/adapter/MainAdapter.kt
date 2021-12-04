@@ -12,6 +12,7 @@ import com.vinylsMobile.vinylsApplication.databinding.ItemLayoutBinding
 import com.vinylsMobile.vinylsApplication.ui.main.view.DetailAlbumActivity
 
 const val ID = "id"
+const val NAME = "name"
 
 class MainAdapter(
     private val albums: ArrayList<AlbumResponse>
@@ -47,6 +48,7 @@ class MainAdapter(
             //Log.d("hola"," mundo")
             val intent = Intent(context, DetailAlbumActivity::class.java).apply {
                 putExtra(ID, albums[position].id.toString())
+                putExtra(NAME, albums[position].name)
             }
 
             context.startActivity(intent)
