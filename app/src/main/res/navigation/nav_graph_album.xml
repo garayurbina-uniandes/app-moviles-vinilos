@@ -10,5 +10,10 @@
         android:name="com.vinylsMobile.vinylsApplication.ui.main.view.AlbumListFragment"
         android:label="VinylsApplication"
         tools:layout="@layout/fragment_album_list"></fragment>
+    <activity
+        android:id="@+id/albumTrackActivity"
+        android:name="com.vinylsMobile.vinylsApplication.ui.main.view.AlbumTrackActivity"
+        android:label="activity_track_album"
+        tools:layout="@layout/activity_track_album" />
 
 </navigation>
