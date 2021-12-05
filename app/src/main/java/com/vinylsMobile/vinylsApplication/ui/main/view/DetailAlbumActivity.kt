@@ -96,7 +96,7 @@ class DetailAlbumActivity : AppCompatActivity() {
         intent.putExtra("idAlbum", albumId)
         intent.putExtra("nameAlbum",albumName)
         startActivity(intent)
-        this.finish()
+//        this.finish()
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {

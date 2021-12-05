@@ -25,4 +25,6 @@
     <string name="form_song_min">min</string>
     <string name="form_song_seg">seg</string>
     <string name="add_song">Agregar Canción</string>
+    <string name="submit_add_album_btn">Click para crear un nuevo album</string>
+    <string name="form_add_name_album">Nombre Album</string>
 </resources>
