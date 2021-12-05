@@ -5,8 +5,6 @@ import com.google.gson.JsonObject
 import com.vinylsMobile.vinylsApplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
-import com.vinylsMobile.vinylsApplication.data.model.TracksResponse
-import retrofit2.Call
 import retrofit2.http.Body
 
 import retrofit2.http.GET

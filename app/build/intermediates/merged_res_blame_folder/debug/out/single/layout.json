@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_album.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_detail_album.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_artist_list.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/fragment_artist_list.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_layout.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/item_layout.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_collector.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_detail_collector.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_track_album.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_track_album.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_collector_list.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/fragment_collector_list.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_album_list.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/fragment_album_list.xml"
+    },
+    {
+        "merged": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_artist.xml",
+        "source": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/src/main/res/layout/activity_detail_artist.xml"
+    }
+]

@@ -1,6 +1,5 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
-import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
@@ -8,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
+import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsApplication.data.api.RetrofitBuilder
 import com.vinylsMobile.vinylsApplication.databinding.ActivityTrackAlbumBinding
@@ -46,10 +46,10 @@ class AlbumTrackActivity : AppCompatActivity() {
 
         postButton.setOnClickListener {
             val name = binding.txtName.text.toString()
-            val input_min = binding.textMin.text.toString()
-            val input_seg = binding.textSeg.text.toString()
+            val inputMin = binding.textMin.text.toString()
+            val inputSeg = binding.textSeg.text.toString()
 
-            val duration = "${input_min}:${input_seg}"
+            val duration = "${inputMin}:${inputSeg}"
             createTrackToAlbum(name, duration, numberAlbumId)
             this.finish()
 

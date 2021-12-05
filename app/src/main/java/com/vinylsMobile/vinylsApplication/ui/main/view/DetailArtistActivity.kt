@@ -1,17 +1,17 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
-import android.R
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
+import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsApplication.data.api.RetrofitBuilder
 import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
-import com.vinylsMobile.vinylsApplication.data.network.CacheManager
 import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
+import com.vinylsMobile.vinylsApplication.network.CacheManager
 import com.vinylsMobile.vinylsApplication.ui.base.ArtistViewModelFactory
 import com.vinylsMobile.vinylsApplication.ui.main.adapter.DetailArtistAdapter
 import com.vinylsMobile.vinylsApplication.ui.main.adapter.IdArtist

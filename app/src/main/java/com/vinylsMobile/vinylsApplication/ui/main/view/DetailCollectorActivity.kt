@@ -1,21 +1,17 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
-import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
+import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsApplication.data.api.RetrofitBuilder
-import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
-import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
 import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailCollectorBinding
-import com.vinylsMobile.vinylsApplication.ui.base.ArtistViewModelFactory
 import com.vinylsMobile.vinylsApplication.ui.base.CollectorViewModelFactory
 import com.vinylsMobile.vinylsApplication.ui.main.adapter.*
-import com.vinylsMobile.vinylsApplication.ui.main.viewmodel.ArtistViewModel
 import com.vinylsMobile.vinylsApplication.ui.main.viewmodel.CollectorViewModel
 import com.vinylsMobile.vinylsApplication.utils.Status
 

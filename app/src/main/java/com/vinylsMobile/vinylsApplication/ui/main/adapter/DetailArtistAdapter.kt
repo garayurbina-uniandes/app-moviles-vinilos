@@ -2,8 +2,6 @@ package com.vinylsMobile.vinylsApplication.ui.main.adapter
 
 
 import android.annotation.SuppressLint
-import android.widget.TableRow
-import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding

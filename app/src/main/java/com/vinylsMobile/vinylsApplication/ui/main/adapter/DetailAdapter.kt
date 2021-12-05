@@ -5,7 +5,6 @@ import com.bumptech.glide.Glide
 
 import com.vinylsMobile.vinylsApplication.data.model.AlbumResponse
 import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailAlbumBinding
-import com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
 import java.text.DateFormat
 import java.util.*
 

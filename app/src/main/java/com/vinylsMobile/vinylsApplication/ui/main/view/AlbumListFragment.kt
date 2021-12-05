@@ -1,5 +1,6 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -96,6 +97,7 @@ class AlbumListFragment : Fragment() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun retrieveList(albums: List<AlbumResponse>) {
         adapter.apply {
             addAlbums(albums)

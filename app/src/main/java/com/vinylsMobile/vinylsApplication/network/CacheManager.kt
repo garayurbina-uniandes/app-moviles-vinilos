@@ -1,4 +1,4 @@
-package com.vinylsMobile.vinylsApplication.data.network
+package com.vinylsMobile.vinylsApplication.network
 
 import android.content.Context
 import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse

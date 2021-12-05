@@ -12,7 +12,6 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
 import com.vinylsMobile.vinylsApplication.databinding.ItemLayoutBinding
-import com.vinylsMobile.vinylsApplication.ui.main.view.DetailArtistActivity
 import com.vinylsMobile.vinylsApplication.ui.main.view.DetailCollectorActivity
 
 class CollectorAdapter(

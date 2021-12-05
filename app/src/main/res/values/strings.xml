@@ -15,7 +15,6 @@
     <string name="detail_album_description_image">Imagen del detalle del album</string>
     <string name="detail_artist_description_image">Imagen del detalle del artista</string>
     <string name="item_layout_description_image">Imagen del artista,album o coleccionista</string>
-    <string name="item_layout_detail_colector">Imagen del detalle de coleccionista</string>
     <string name="menu_album__label">Albums</string>
     <string name="menu_artist_label">Artists</string>
     <string name="menu_collector_label">Collectors</string>
@@ -23,6 +22,5 @@
     <string name="tracks_label">Canciones:</string>
     <string name="form_name_song">Nombre Canción</string>
     <string name="form_song_min">min</string>
-    <string name="form_song_seg">seg</string>
     <string name="add_song">Agregar Canción</string>
 </resources>
