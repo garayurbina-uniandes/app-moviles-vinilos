@@ -60,15 +60,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
+
             <TextView
                 android:id="@+id/textContentArtist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:textColor="@color/black"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textLabelArtist"
-                app:layout_constraintStart_toEndOf="@+id/textLabelArtist"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelArtist"
                 tools:text="Name Artists" />
 
 
@@ -77,12 +78,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/date_label"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textLabelArtist" />
+                app:layout_constraintTop_toBottomOf="@+id/textContentArtist" />
 
             <TextView
                 android:id="@+id/textContentDate"
@@ -166,6 +167,28 @@
                 app:layout_constraintTop_toBottomOf="@+id/textLabelDescription"
                 tools:text="Descripcion orem ipsum dolor sit amet consectetur adipiscing elit himenaeos nunc dictum, lacus sed penatibus tempor fringilla sociis posuere curabitur semper, ornare nisi conubia habitasse dignissim congue varius tempus suspendisse. Eleifend torquent praesent leo porta et lacinia a, ridiculus molestie odio iaculis montes luctus nullam, enim malesuada aliquet eget nisl arcu. Rhoncus senectus aliquam id convallis ligula auctor orci suscipit, pharetra cubilia mi mollis porttitor quisque platea nec lobortis, euismod proin gravida sem sapien bibendum hendrerit. Laoreet tortor velit vulputate nam dis eros fames massa, maecenas duis felis magnis lectus pellentesque vitae parturient quis, mattis vivamus venenatis eu purus in class. " />
 
+            <TextView
+                android:id="@+id/textLabelCanciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/tracks_label"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textContentDescription" />
+            <TextView
+                android:id="@+id/listTexTracks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelCanciones"
+                tools:text="TextView"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
