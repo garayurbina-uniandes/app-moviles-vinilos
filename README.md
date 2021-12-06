@@ -11,6 +11,8 @@ Version movil de app web vinilos
 
 * La información detallada del proyecto la puede encontrar en la Wiki https://github.com/garayurbina-uniandes/app-moviles-vinilos/wiki
 
+4. El APK de la aplicación se llama app-debug.apk y está en la raíz del proyecto
+
 # Pruebas
 
 # Automatizadas Espresso
