@@ -1,15 +1,19 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsApplication.data.api.RetrofitBuilder
 import com.vinylsMobile.vinylsApplication.data.model.AlbumResponse
@@ -78,10 +82,27 @@ class AlbumListFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentAlbumListBinding.inflate(layoutInflater, container, false)
         setupUI()
+        bindMenuEvents()
         setupViewModel()
         setupObservers()
         return binding.root
     }
+
+    private fun bindMenuEvents(){
+        val createAlbumMenuButton: FloatingActionButton = binding.btnFabCreateAlbum
+        createAlbumMenuButton.setOnClickListener { view ->
+            launchAlbumCreateActivity(view)
+        }
+
+    }
+
+    private fun launchAlbumCreateActivity(view: View) {
+        val intent = Intent(activity, CreateAlbumActivity::class.java)
+        startActivity(intent)
+    }
+
+
+
 
     companion object {
         /**
@@ -97,11 +118,11 @@ class AlbumListFragment : Fragment() {
         }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     private fun retrieveList(albums: List<AlbumResponse>) {
         adapter.apply {
             addAlbums(albums)
             notifyDataSetChanged()
         }
     }
+
 }
