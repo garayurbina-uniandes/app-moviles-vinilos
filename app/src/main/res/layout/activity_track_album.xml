@@ -67,7 +67,8 @@
                     android:id="@+id/txt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
+                    android:background="@color/white_2nd"
+                    android:textColor="@color/black_900"
                     android:hint="@string/form_name_song" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -86,6 +87,7 @@
                     android:id="@+id/text_min"
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
+                    android:background="@color/white_2nd"
                     android:hint="@string/form_song_min" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,6 +103,7 @@
                     android:id="@+id/text_seg"
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
+                    android:background="@color/white_2nd"
                     android:hint="@string/form_song_seg" />
             </com.google.android.material.textfield.TextInputLayout>
 

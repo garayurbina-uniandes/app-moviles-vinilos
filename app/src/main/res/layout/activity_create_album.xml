@@ -67,7 +67,7 @@
                     android:id="@+id/txt_name_album"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
+                    android:background="@color/white_2nd"
                     android:hint="@string/form_add_name_album" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -87,13 +87,14 @@
                     android:id="@+id/txt_url_cover_album"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
+                    android:background="@color/white_2nd"
                     android:hint="@string/form_add_name_url_cover" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout_genero"
+                android:background="@color/white_2nd"
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -127,6 +128,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout_genero">
 
 
@@ -134,7 +136,8 @@
                     android:id="@+id/autoComplete_records"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
+                    android:inputType="none"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,7 +156,7 @@
                     android:id="@+id/txt_date_album"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
+                    android:background="@color/white_2nd"
                     android:hint="@string/orm_add_description_album" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -173,7 +176,7 @@
                     android:id="@+id/txt_description_album"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
+                    android:background="@color/white_2nd"
                     android:hint="@string/orm_add_date_album" />
 
             </com.google.android.material.textfield.TextInputLayout>
