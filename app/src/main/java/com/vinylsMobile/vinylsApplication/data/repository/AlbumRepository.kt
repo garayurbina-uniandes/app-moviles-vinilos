@@ -9,5 +9,7 @@ class AlbumRepository(private val apiHelper: ApiHelper) {
 
     suspend fun getAlbumDetail(id: String) = apiHelper.getAlbumDetail(id)
 
-    suspend fun postAlbumTrack(id:String, track: JsonObject) = apiHelper.postAlbumTrack(id,track)
+    suspend fun postAlbumTrack(id: String, track: JsonObject) = apiHelper.postAlbumTrack(id, track)
+
+    suspend fun postAlbum(album: JsonObject) = apiHelper.postAlbum(album)
 }

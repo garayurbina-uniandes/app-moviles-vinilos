@@ -38,4 +38,8 @@ interface ApiService {
 
     @POST("albums/{id}/tracks")
     suspend fun postAlbumTrack(@Path("id") id: String, @Body track: JsonObject): AlbumResponse
+
+    @POST("albums")
+    suspend fun postAlbum(@Body album: JsonObject): AlbumResponse
+
 }

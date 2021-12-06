@@ -1,17 +1,23 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
-import com.vinylsMobile.vinylsApplication.R
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.lifecycleScope
+import com.vinylsMobile.vinylsApplication.R
 import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
 import com.vinylsMobile.vinylsApplication.data.api.RetrofitBuilder
+import com.vinylsMobile.vinylsApplication.data.model.AlbumModel
 import com.vinylsMobile.vinylsApplication.databinding.ActivityCreateAlbumBinding
 import com.vinylsMobile.vinylsApplication.ui.base.ViewModelFactory
 import com.vinylsMobile.vinylsApplication.ui.main.viewmodel.MainViewModel
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
 
 class CreateAlbumActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateAlbumBinding
@@ -35,13 +41,33 @@ class CreateAlbumActivity : AppCompatActivity() {
 
 
         val generos = resources.getStringArray(R.array.list_generos)
-        val arrayAdapter_genero  = ArrayAdapter(this, R.layout.drop_items,generos)
+        val arrayAdapter_genero = ArrayAdapter(this, R.layout.drop_items, generos)
         binding.autoCompleteGeneros.setAdapter(arrayAdapter_genero)
 
+        val nameAlbum = intent.getStringExtra("nameAlbum")
+        val postButton: Button = binding.btnCreateTrackAlbum
+
         val records = resources.getStringArray(R.array.list_records)
-        val arrayAdapter_records  = ArrayAdapter(this, R.layout.drop_items,records)
+        val arrayAdapter_records = ArrayAdapter(this, R.layout.drop_items, records)
         binding.autoCompleteRecords.setAdapter(arrayAdapter_records)
 
+        postButton.setOnClickListener {
+            val albumName = binding.txtNameAlbum.text.toString()
+            val coverImage = binding.txtUrlCoverAlbum.text.toString()
+            val genreText = binding.textInputLayoutGenero.editText!!.text.toString()
+            val recordLabel = binding.textInputLayoutRecord.editText!!.text.toString()
+            val description = binding.txtDescriptionAlbum.text.toString()
+            val dateCreation = binding.txtDateAlbum.text.toString()
+
+            val dateFormatted = SimpleDateFormat("yyyy-MM-dd").format(
+                SimpleDateFormat("dd/MM/yyyy").parse(dateCreation)
+            )
+            val releaseDate = dateFormatted.toString() + "T00:00:00-05:00"
+            val album =
+                AlbumModel(albumName, coverImage, genreText, recordLabel, description, releaseDate)
+            createAlbum(album)
+            this.finish()
+        }
 
 
     }
@@ -52,6 +78,7 @@ class CreateAlbumActivity : AppCompatActivity() {
             ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
         )[MainViewModel::class.java]
     }
+
     override fun onContextItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
@@ -70,6 +97,16 @@ class CreateAlbumActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun createAlbum(album: AlbumModel) {
+        lifecycleScope.launch {
+            mainViewModel.createAlbumPost(album)
+            val toast =
+                Toast.makeText(applicationContext, "Se ha creado el album", Toast.LENGTH_LONG)
+            toast.show()
+        }
+
     }
 
 }

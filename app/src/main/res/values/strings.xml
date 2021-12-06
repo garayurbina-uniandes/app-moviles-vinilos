@@ -30,7 +30,7 @@
     <string name="form_add_record_album">Record Label</string>
     <string name="orm_add_description_album">Descripción</string>
     <string name="release_date">Fecha creación</string>
-    <string name="orm_add_date_album">Fecha creación</string>
+    <string name="orm_add_date_album">Fecha creación (dd/MM/yyyy)</string>
     <string name="label_create_album_instruction">Completa todos los campos</string>
     <string name="add_album">Crear Album</string>
     <string name="form_song_seg">seg</string>

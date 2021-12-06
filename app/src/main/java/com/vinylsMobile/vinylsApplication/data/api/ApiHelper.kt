@@ -15,4 +15,5 @@ class ApiHelper(private val apiService: ApiService) {
     suspend fun getCollectors() = apiService.getCollectors()
     suspend fun getCollectorsDetail(id:String) = apiService.getCollectorsDetail(id)
     suspend fun postAlbumTrack(id:String, track: JsonObject) = apiService.postAlbumTrack(id,track)
+    suspend fun postAlbum(album: JsonObject) = apiService.postAlbum(album)
 }
