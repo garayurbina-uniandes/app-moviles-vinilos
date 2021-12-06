@@ -1,9 +1,10 @@
 package com.vinylsMobile.vinylsApplication.ui.main.view
 
-import android.R
+import com.vinylsMobile.vinylsApplication.R
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
@@ -19,11 +20,30 @@ class CreateAlbumActivity : AppCompatActivity() {
     private var datePickerDialog: DatePickerDialog? = null
     private var selected_date: String = ""
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateAlbumBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupViewModel()
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Crear Album"
+        supportActionBar?.subtitle = "Album"
+
+
+        val generos = resources.getStringArray(R.array.list_generos)
+        val arrayAdapter_genero  = ArrayAdapter(this, R.layout.drop_items,generos)
+        binding.autoCompleteGeneros.setAdapter(arrayAdapter_genero)
+
+        val records = resources.getStringArray(R.array.list_records)
+        val arrayAdapter_records  = ArrayAdapter(this, R.layout.drop_items,records)
+        binding.autoCompleteRecords.setAdapter(arrayAdapter_records)
+
+
+
     }
 
     private fun setupViewModel() {
