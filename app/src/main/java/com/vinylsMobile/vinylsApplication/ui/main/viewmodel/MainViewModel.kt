@@ -3,6 +3,7 @@ package com.vinylsMobile.vinylsApplication.ui.main.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.google.gson.JsonObject
+import com.vinylsMobile.vinylsApplication.data.model.AlbumModel
 import com.vinylsMobile.vinylsApplication.data.model.TracksModel
 import com.vinylsMobile.vinylsApplication.data.repository.AlbumRepository
 import com.vinylsMobile.vinylsApplication.utils.Resource
@@ -28,15 +29,34 @@ class MainViewModel(private val AlbumRepository: AlbumRepository) : ViewModel() 
         }
     }
 
-    suspend fun createTrackToAlbum(name: String, duration: String, id: Number)  = withContext(Dispatchers.IO) {
-        val track = TracksModel(name,duration)
-        AlbumRepository.postAlbumTrack(id.toString(), jsonPostString(track.name,track.duration))
+    suspend fun createTrackToAlbum(name: String, duration: String, id: Number) =
+        withContext(Dispatchers.IO) {
+            val track = TracksModel(name, duration)
+            AlbumRepository.postAlbumTrack(
+                id.toString(),
+                jsonPostString(track.name, track.duration)
+            )
+        }
+
+    suspend fun createAlbumPost(album: AlbumModel) = withContext(Dispatchers.IO) {
+        AlbumRepository.postAlbum(jsonPostAlbumString(album))
     }
 
-    private fun jsonPostString(name:String, duration:String) : JsonObject {
+    private fun jsonPostString(name: String, duration: String): JsonObject {
         val paramObject = JsonObject()
         paramObject.addProperty("name", name)
         paramObject.addProperty("duration", duration)
+        return paramObject
+    }
+
+    private fun jsonPostAlbumString(album: AlbumModel): JsonObject {
+        val paramObject = JsonObject()
+        paramObject.addProperty("name", album.name)
+        paramObject.addProperty("cover", album.cover)
+        paramObject.addProperty("releaseDate", album.dateCreation)
+        paramObject.addProperty("description", album.description)
+        paramObject.addProperty("genre", album.genre)
+        paramObject.addProperty("recordLabel", album.record)
         return paramObject
     }
 
