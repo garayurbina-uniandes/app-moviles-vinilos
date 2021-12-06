@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vinylsMobile.vinylsApplication.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,14 +22,19 @@ public final class FragmentAlbumListBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final FloatingActionButton btnFabCreateAlbum;
+
+  @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
   public final RecyclerView recyclerView;
 
-  private FragmentAlbumListBinding(@NonNull FrameLayout rootView, @NonNull ProgressBar progressBar,
+  private FragmentAlbumListBinding(@NonNull FrameLayout rootView,
+      @NonNull FloatingActionButton btnFabCreateAlbum, @NonNull ProgressBar progressBar,
       @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
+    this.btnFabCreateAlbum = btnFabCreateAlbum;
     this.progressBar = progressBar;
     this.recyclerView = recyclerView;
   }
@@ -60,6 +66,12 @@ public final class FragmentAlbumListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_fab_create_album;
+      FloatingActionButton btnFabCreateAlbum = ViewBindings.findChildViewById(rootView, id);
+      if (btnFabCreateAlbum == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -72,7 +84,8 @@ public final class FragmentAlbumListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentAlbumListBinding((FrameLayout) rootView, progressBar, recyclerView);
+      return new FragmentAlbumListBinding((FrameLayout) rootView, btnFabCreateAlbum, progressBar,
+          recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

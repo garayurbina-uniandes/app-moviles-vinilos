@@ -33,6 +33,7 @@
     <string name="orm_add_date_album">Fecha creación</string>
     <string name="label_create_album_instruction">Completa todos los campos</string>
     <string name="add_album">Crear Album</string>
+    <string name="form_song_seg">seg</string>
     <string-array name="list_generos">
         <item>Classical</item>
         <item>Folk</item>

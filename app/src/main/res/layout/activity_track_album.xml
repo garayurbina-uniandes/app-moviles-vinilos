@@ -101,7 +101,7 @@
                     android:id="@+id/text_seg"
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    android:hint="@string/form_song_min" />
+                    android:hint="@string/form_song_seg" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

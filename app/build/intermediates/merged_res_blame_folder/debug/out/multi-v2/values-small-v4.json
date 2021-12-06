@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/claudia/AndroidStudioProjects/app-moviles-vinilos/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
+            "outputFile": "C:\\Users\\Ingeambiental\\AndroidStudioProjects\\app-moviles-vinilos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
-                    "source": "/home/claudia/.gradle/caches/transforms-3/b64c581a9daa138f08ffadfeafcf90fd/transformed/material-1.4.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "C:\\Users\\Ingeambiental\\.gradle\\caches\\transforms-3\\b64c581a9daa138f08ffadfeafcf90fd\\transformed\\material-1.4.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

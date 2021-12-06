@@ -72,6 +72,8 @@ animator nav_default_pop_exit_anim
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
+array list_generos
+array list_records
 array preloaded_fonts
 attr SharedValue
 attr SharedValueId
@@ -1836,6 +1838,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_baseline_add_24_black
 drawable ic_baseline_album_24
 drawable ic_baseline_people_24
 drawable ic_clock_black_24dp
@@ -1961,6 +1964,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addAlbum
 id addTrackAlbum
 id albumTrackActivity
 id alertTitle
@@ -1980,6 +1984,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id autoComplete_generos
+id autoComplete_records
 id barrier
 id barrier2
 id baseline
@@ -1994,6 +2000,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_create_track_Album
+id btn_fab_create_album
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2365,9 +2372,14 @@ id textContentDescription
 id textContentGenre
 id textContentRecord
 id textEnd
+id textInputLayout_date
+id textInputLayout_description
+id textInputLayout_genero
 id textInputLayout_min
 id textInputLayout_name
+id textInputLayout_record
 id textInputLayout_seg
+id textInputLayout_urlCover
 id textLabelAlbums
 id textLabelArtist
 id textLabelCanciones
@@ -2409,7 +2421,11 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txt_date_album
+id txt_description_album
 id txt_name
+id txt_name_album
+id txt_url_cover_album
 id unchecked
 id uniform
 id unlabeled
@@ -2500,6 +2516,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_create_album
 layout activity_detail_album
 layout activity_detail_artist
 layout activity_detail_collector
@@ -2521,6 +2538,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout drop_items
 layout dynamic_feature_install_fragment
 layout fragment_album_list
 layout fragment_artist_list
@@ -2638,6 +2656,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_album
 string add_song
 string androidx_startup
 string app_name
@@ -2665,6 +2684,10 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string favorite_performers
+string form_add_genero_album
+string form_add_name_album
+string form_add_name_url_cover
+string form_add_record_album
 string form_name_song
 string form_song_min
 string genre_label
@@ -2675,6 +2698,7 @@ string installation_failed
 string installing_module
 string item_layout_description_image
 string item_view_role_description
+string label_create_album_instruction
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2736,6 +2760,8 @@ string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string ok
+string orm_add_date_album
+string orm_add_description_album
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2743,10 +2769,12 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string progress
 string record_label
+string release_date
 string retry
 string search_menu_title
 string status_bar_notification_info_overflow
 string sub_menu_album_options
+string submit_add_album_btn
 string tracks_label
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

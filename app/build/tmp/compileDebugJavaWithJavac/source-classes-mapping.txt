@@ -2,10 +2,10 @@ com/vinylsMobile/vinylsApplication/databinding/FragmentAlbumListBinding.java
  com.vinylsMobile.vinylsApplication.databinding.FragmentAlbumListBinding
 com/vinylsMobile/vinylsApplication/databinding/ActivityDetailAlbumBinding.java
  com.vinylsMobile.vinylsApplication.databinding.ActivityDetailAlbumBinding
-com/vinylsMobile/vinylsApplication/databinding/FragmentArtistListBinding.java
- com.vinylsMobile.vinylsApplication.databinding.FragmentArtistListBinding
 com/vinylsMobile/vinylsApplication/databinding/ItemLayoutBinding.java
  com.vinylsMobile.vinylsApplication.databinding.ItemLayoutBinding
+com/vinylsMobile/vinylsApplication/databinding/FragmentArtistListBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.FragmentArtistListBinding
 com/vinylsMobile/vinylsApplication/databinding/ActivityTrackAlbumBinding.java
  com.vinylsMobile.vinylsApplication.databinding.ActivityTrackAlbumBinding
 com/vinylsMobile/vinylsApplication/databinding/FragmentCollectorListBinding.java
@@ -16,5 +16,9 @@ com/vinylsMobile/vinylsApplication/databinding/ActivityDetailArtistBinding.java
  com.vinylsMobile.vinylsApplication.databinding.ActivityDetailArtistBinding
 com/vinylsMobile/vinylsApplication/databinding/ActivityDetailCollectorBinding.java
  com.vinylsMobile.vinylsApplication.databinding.ActivityDetailCollectorBinding
+com/vinylsMobile/vinylsApplication/databinding/ActivityCreateAlbumBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.ActivityCreateAlbumBinding
 com/vinylsMobile/vinylsApplication/BuildConfig.java
  com.vinylsMobile.vinylsApplication.BuildConfig
+com/vinylsMobile/vinylsApplication/databinding/DropItemsBinding.java
+ com.vinylsMobile.vinylsApplication.databinding.DropItemsBinding

@@ -41,6 +41,11 @@
             android:parentActivityName="com.vinylsMobile.vinylsApplication.ui.main.view.DetailAlbumActivity"
             android:theme="@style/Theme.VinylsApplication.NoActionBar" />
         <activity
+            android:name="com.vinylsMobile.vinylsApplication.ui.main.view.CreateAlbumActivity"
+            android:exported="false"
+            android:parentActivityName="com.vinylsMobile.vinylsApplication.ui.main.view.MainActivity"
+            android:theme="@style/Theme.VinylsApplication.NoActionBar" />
+        <activity
             android:name="com.vinylsMobile.vinylsApplication.ui.main.view.MainActivity"
             android:exported="true" >
             <intent-filter>
